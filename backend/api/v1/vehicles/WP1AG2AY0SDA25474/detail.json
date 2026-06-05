@@ -1,0 +1,59 @@
+{
+  "data": {
+    "vin": "WP1AG2AY0SDA25474",
+    "createdAt": "2026-02-27 12:09:43",
+    "vehicle": {
+      "baseInvoice": 112410,
+      "baseMsrp": 124900,
+      "bodyStyle": "SUV",
+      "confidence": 0.995,
+      "cylinders": 8,
+      "doors": 4,
+      "drivetrain": "AWD",
+      "engine": "4.0L 8Cyl premium unleaded (required)",
+      "exteriorColor": "White",
+      "fuel": "Gasoline",
+      "interiorColor": "Black",
+      "make": "Porsche",
+      "model": "Cayenne",
+      "seats": 5,
+      "series": "GTS 4dr SUV AWD (4.0L 8cyl Turbo 8A)",
+      "squishVin": "WP1AG2AYSD",
+      "style": "4dr SUV",
+      "transmission": "Automatic",
+      "trim": "GTS",
+      "type": "Crossover",
+      "vin": "WP1AG2AY0SDA25474",
+      "year": 2025
+    },
+    "retailListing": {
+      "city": "Schaumburg",
+      "cpo": false,
+      "dealer": "Strada Motorsports",
+      "miles": 12095,
+      "photoCount": 1,
+      "price": 124900,
+      "primaryImage": "https://api.auto.dev/photos/retail/WP1AG2AY0SDA25474-1.jpg",
+      "state": "IL",
+      "used": true,
+      "zip": "60193"
+    },
+    "history": null,
+    "appSpecs": {
+      "horsepower": 500,
+      "acceleration": "3.7s",
+      "topSpeed": "285 km/h",
+      "fuelEconomy": "12.0 L/100km",
+      "drivetrain": "AWD",
+      "category": "SUV",
+      "description": "The Cayenne GTS strikes the perfect balance between luxury and performance with a twin-turbocharged V8 and sport-tuned suspension for an exhilarating drive.",
+      "keyFeatures": [
+        "4.0L Twin-Turbo V8",
+        "8-speed Tiptronic S",
+        "All-Wheel Drive",
+        "GTS Sport Package"
+      ]
+    },
+    "photoCount": 1
+  }
+}

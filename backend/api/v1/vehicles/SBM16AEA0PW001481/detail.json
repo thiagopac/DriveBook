@@ -1,0 +1,62 @@
+{
+  "data": {
+    "vin": "SBM16AEA0PW001481",
+    "createdAt": "2025-11-02 14:30:00",
+    "vehicle": {
+      "bodyStyle": "Car",
+      "confidence": 0.995,
+      "cylinders": 6,
+      "doors": 2,
+      "drivetrain": "RWD",
+      "engine": "3.0L 6Cyl Plug-In Hybrid",
+      "exteriorColor": "Orange",
+      "fuel": "Plug-in Hybrid",
+      "interiorColor": "Black",
+      "make": "Mclaren",
+      "model": "Artura",
+      "seats": 2,
+      "squishVin": "SBM16AEAPW",
+      "style": "Coupe",
+      "transmission": "Automated Manual",
+      "type": "Coupe",
+      "vin": "SBM16AEA0PW001481",
+      "year": 2023
+    },
+    "retailListing": {
+      "city": "Charlotte",
+      "cpo": false,
+      "dealer": "McLaren Charlotte",
+      "miles": 3210,
+      "photoCount": 34,
+      "price": 182677,
+      "primaryImage": "https://api.auto.dev/photos/retail/SBM16AEA0PW001481-1.jpg",
+      "state": "NC",
+      "used": true,
+      "zip": "28217"
+    },
+    "history": {
+      "accidentCount": 0,
+      "accidents": false,
+      "oneOwner": true,
+      "ownerCount": 1,
+      "personalUse": true,
+      "usageType": "Personal Use"
+    },
+    "appSpecs": {
+      "horsepower": 680,
+      "acceleration": "3.0s",
+      "topSpeed": "330 km/h",
+      "fuelEconomy": "7.1 L/100km",
+      "drivetrain": "RWD",
+      "category": "Hybrid",
+      "description": "The Artura is McLaren's first series-production High Performance Hybrid, combining a 3.0L twin-turbo V6 with an electric motor for 680 HP of pure exhilaration.",
+      "keyFeatures": [
+        "3.0L Twin-Turbo V6 + Electric Motor",
+        "Plug-in Hybrid Technology",
+        "Rear-Wheel Drive",
+        "Carbon Fiber Monocoque"
+      ]
+    },
+    "photoCount": 34
+  }
+}

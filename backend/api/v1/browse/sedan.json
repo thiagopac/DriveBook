@@ -1,0 +1,111 @@
+{
+  "total": 2,
+  "data": [
+    {
+      "vin": "WBS13HJ01SFT79303",
+      "vehicle": {
+        "baseInvoice": 71830,
+        "baseMsrp": 76700,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 4,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl premium unleaded (required)",
+        "exteriorColor": "Gray",
+        "fuel": "Gasoline",
+        "interiorColor": "Orange",
+        "make": "BMW",
+        "model": "M3",
+        "seats": 5,
+        "series": "4dr Sedan (3.0L 6cyl Turbo 6M)",
+        "squishVin": "WBS13HJ0SF",
+        "style": "Sedan",
+        "transmission": "Manual",
+        "trim": "Competition",
+        "type": "Luxury",
+        "vin": "WBS13HJ01SFT79303",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Greenwood",
+        "cpo": false,
+        "dealer": "Dreyer & Reinbold BMW",
+        "miles": 1874,
+        "photoCount": 34,
+        "price": 85500,
+        "primaryImage": "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-1.jpg",
+        "state": "IN",
+        "used": true,
+        "zip": "46143"
+      },
+      "appSpecs": {
+        "horsepower": 503,
+        "acceleration": "3.5s",
+        "topSpeed": "306 km/h",
+        "fuelEconomy": "10.5 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sedan",
+        "description": "The BMW M3 Competition is the pinnacle of sports sedans, combining daily usability with track-ready performance. Every detail engineered for driving perfection.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo Inline-6",
+          "6-speed Manual Transmission",
+          "Rear-Wheel Drive",
+          "M Carbon Bucket Seats"
+        ]
+      }
+    },
+    {
+      "vin": "WBS83FK01SCT91714",
+      "vehicle": {
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 8,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "4.4L 8Cyl Plug-In Hybrid",
+        "exteriorColor": "Black",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "BMW",
+        "model": "M5",
+        "seats": 5,
+        "series": "4dr Sedan AWD (4.4L 8cyl Turbo gas/electric plug-in hybrid 8AM)",
+        "squishVin": "WBS83FK0SC",
+        "style": "Sedan",
+        "transmission": "Automatic",
+        "trim": "xDrive",
+        "type": "Luxury",
+        "vin": "WBS83FK01SCT91714",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Denver",
+        "cpo": false,
+        "dealer": "BMW of Denver",
+        "miles": 4200,
+        "photoCount": 57,
+        "price": 104000,
+        "primaryImage": "https://api.auto.dev/photos/retail/WBS83FK01SCT91714-1.jpg",
+        "state": "CO",
+        "used": true,
+        "zip": "80202"
+      },
+      "appSpecs": {
+        "horsepower": 727,
+        "acceleration": "3.5s",
+        "topSpeed": "305 km/h",
+        "fuelEconomy": "10.2 L/100km",
+        "drivetrain": "AWD",
+        "category": "Sedan",
+        "description": "The new BMW M5 is a plug-in hybrid super sedan with 727 HP. It conquers the Nurburgring in the morning and the school run in the afternoon.",
+        "keyFeatures": [
+          "4.4L Twin-Turbo V8 + Electric Motor",
+          "Plug-in Hybrid System",
+          "M xDrive All-Wheel Drive",
+          "8-speed M Steptronic"
+        ]
+      }
+    }
+  ]
+}

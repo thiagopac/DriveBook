@@ -1,0 +1,157 @@
+{
+  "total": 3,
+  "data": [
+    {
+      "vin": "WA124BGF8SA006865",
+      "vehicle": {
+        "baseInvoice": 66365,
+        "baseMsrp": 70600,
+        "bodyStyle": "SUV",
+        "confidence": 0.995,
+        "cylinders": 0,
+        "doors": 4,
+        "engine": "0Cyl electric",
+        "exteriorColor": "Gray",
+        "fuel": "Electric",
+        "interiorColor": "Black",
+        "make": "Audi",
+        "model": "Q6 e-tron",
+        "seats": 5,
+        "series": "Premium Plus 4dr SUV AWD (electric DD)",
+        "squishVin": "WA124BGFSA",
+        "style": "4dr SUV",
+        "transmission": "Direct Drive",
+        "trim": "Premium Plus",
+        "type": "Crossover",
+        "vin": "WA124BGF8SA006865",
+        "year": 2025
+      },
+      "retailListing": {
+        "cpo": false,
+        "dealer": "Carvana",
+        "miles": 4352,
+        "photoCount": 1,
+        "price": 50990,
+        "primaryImage": "https://api.auto.dev/photos/retail/WA124BGF8SA006865-1.jpg",
+        "used": true,
+        "vdp": "https://www.carvana.com/vehicle/4442566"
+      },
+      "appSpecs": {
+        "horsepower": 489,
+        "acceleration": "4.3s",
+        "topSpeed": "210 km/h",
+        "fuelEconomy": "Electric - 545 km range",
+        "drivetrain": "AWD",
+        "category": "Electric",
+        "description": "The Q6 e-tron pioneers Audi's PPE platform, offering 545 km of range with 800V fast charging. A new era of electric luxury performance SUVs.",
+        "keyFeatures": [
+          "Dual Electric Motors",
+          "800V Fast Charging Architecture",
+          "All-Wheel Drive",
+          "Augmented Reality HUD"
+        ]
+      }
+    },
+    {
+      "vin": "WBY43HD0XSFU69399",
+      "vehicle": {
+        "baseInvoice": 58440,
+        "baseMsrp": 62300,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "electric",
+        "exteriorColor": "Black",
+        "fuel": "Electric",
+        "interiorColor": "Brown",
+        "make": "BMW",
+        "model": "i4",
+        "seats": 5,
+        "series": "xDrive40 4dr Sedan AWD (electric DD)",
+        "squishVin": "WBY43HD0SF",
+        "style": "Sedan",
+        "transmission": "Direct Drive",
+        "trim": "xDrive40",
+        "type": "Electric",
+        "vin": "WBY43HD0XSFU69399",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Indianapolis",
+        "cpo": false,
+        "dealer": "Carvana",
+        "miles": 6265,
+        "photoCount": 54,
+        "price": 53590,
+        "primaryImage": "https://api.auto.dev/photos/retail/WBY43HD0XSFU69399-1.jpg",
+        "state": "IN",
+        "used": true,
+        "zip": "46202",
+        "vdp": "https://www.carvana.com/vehicle/4272297"
+      },
+      "appSpecs": {
+        "horsepower": 536,
+        "acceleration": "3.9s",
+        "topSpeed": "227 km/h",
+        "fuelEconomy": "Electric - 477 km range",
+        "drivetrain": "AWD",
+        "category": "Electric",
+        "description": "The BMW i4 M50 delivers the driving joy of an M car with zero emissions. Precise handling, instant torque, and a 477 km range make it the electric sports sedan to beat.",
+        "keyFeatures": [
+          "Dual Electric Motors",
+          "DC Fast Charging 205 kW",
+          "All-Wheel Drive",
+          "M Sport Package"
+        ]
+      }
+    },
+    {
+      "vin": "7SAXCDE53SF467194",
+      "vehicle": {
+        "baseMsrp": 84990,
+        "bodyStyle": "SUV",
+        "confidence": 0.995,
+        "doors": 4,
+        "engine": "electric",
+        "exteriorColor": "White",
+        "fuel": "Electric",
+        "interiorColor": "Other",
+        "make": "Tesla",
+        "model": "Model X",
+        "seats": 7,
+        "series": "4dr SUV AWD (electric DD)",
+        "squishVin": "7SAXCDE5SF",
+        "style": "4dr SUV",
+        "transmission": "Direct Drive",
+        "type": "Crossover",
+        "vin": "7SAXCDE53SF467194",
+        "year": 2025
+      },
+      "retailListing": {
+        "dealer": "Carvana",
+        "miles": 9802,
+        "photoCount": 1,
+        "price": 74590,
+        "primaryImage": "https://api.auto.dev/photos/retail/7SAXCDE53SF467194-1.jpg",
+        "used": true,
+        "vdp": "https://www.carvana.com/vehicle/4266102"
+      },
+      "appSpecs": {
+        "horsepower": 670,
+        "acceleration": "3.8s",
+        "topSpeed": "250 km/h",
+        "fuelEconomy": "Electric - 576 km range",
+        "drivetrain": "AWD",
+        "category": "Electric",
+        "description": "The Tesla Model X redefines what an SUV can be. With falcon-wing doors, 7-seat capacity, and 670 HP, it's the world's fastest SUV in its class.",
+        "keyFeatures": [
+          "Dual Electric Motors",
+          "Falcon-Wing Rear Doors",
+          "All-Wheel Drive",
+          "17-inch Cinematic Display"
+        ]
+      }
+    }
+  ]
+}

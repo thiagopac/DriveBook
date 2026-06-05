@@ -1,0 +1,41 @@
+{
+  "data": {
+    "retail": [
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-1.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-2.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-3.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-4.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-5.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-6.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-7.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-8.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-9.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-10.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-11.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-12.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-13.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-14.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-15.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-16.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-17.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-18.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-19.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-20.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-21.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-22.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-23.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-24.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-25.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-26.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-27.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-28.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-29.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-30.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-31.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-32.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-33.jpg",
+      "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-34.jpg"
+    ],
+    "wholesale": []
+  }
+}

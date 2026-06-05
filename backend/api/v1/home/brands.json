@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": "porsche",
+      "name": "Porsche"
+    },
+    {
+      "id": "bmw",
+      "name": "BMW"
+    },
+    {
+      "id": "audi",
+      "name": "Audi"
+    },
+    {
+      "id": "ferrari",
+      "name": "Ferrari"
+    },
+    {
+      "id": "mclaren",
+      "name": "McLaren"
+    },
+    {
+      "id": "lamborghini",
+      "name": "Lamborghini"
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla"
+    },
+    {
+      "id": "mercedes-benz",
+      "name": "Mercedes-Benz"
+    }
+  ]
+}

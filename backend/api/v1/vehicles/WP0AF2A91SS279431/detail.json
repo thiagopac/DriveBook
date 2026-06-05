@@ -1,0 +1,66 @@
+{
+  "data": {
+    "vin": "WP0AF2A91SS279431",
+    "createdAt": "2026-04-27 22:45:57",
+    "vehicle": {
+      "baseInvoice": 217170,
+      "baseMsrp": 241300,
+      "bodyStyle": "Car",
+      "confidence": 0.995,
+      "cylinders": 6,
+      "doors": 2,
+      "drivetrain": "RWD",
+      "engine": "4.0L 6Cyl Gasoline",
+      "exteriorColor": "Green",
+      "fuel": "Gasoline",
+      "interiorColor": "Tan",
+      "make": "Porsche",
+      "model": "911",
+      "seats": 2,
+      "series": "GT3 RS 2dr Coupe (4.0L 6cyl 7AM)",
+      "squishVin": "WP0AF2A9SS",
+      "style": "Coupe",
+      "transmission": "Automated Manual",
+      "trim": "GT3 RS",
+      "type": "Coupe",
+      "vin": "WP0AF2A91SS279431",
+      "year": 2025
+    },
+    "retailListing": {
+      "city": "Costa Mesa",
+      "cpo": false,
+      "dealer": "EuroCar",
+      "miles": 57,
+      "photoCount": 51,
+      "price": 759999,
+      "primaryImage": "https://api.auto.dev/photos/retail/WP0AF2A91SS279431-1.jpg",
+      "state": "CA",
+      "used": true,
+      "zip": "92626"
+    },
+    "history": {
+      "accidentCount": 0,
+      "accidents": false,
+      "oneOwner": true,
+      "ownerCount": 1,
+      "personalUse": true,
+      "usageType": "Personal Use"
+    },
+    "appSpecs": {
+      "horsepower": 518,
+      "acceleration": "3.2s",
+      "topSpeed": "296 km/h",
+      "fuelEconomy": "13.1 L/100km",
+      "drivetrain": "RWD",
+      "category": "Sports Car",
+      "description": "The 911 GT3 RS is built for performance. With sharper handling, increased downforce and a naturally aspirated engine, it delivers an unmatched driving experience.",
+      "keyFeatures": [
+        "4.0L Naturally Aspirated Flat-6",
+        "7-speed PDK Transmission",
+        "Rear-Wheel Drive",
+        "Carbon Fiber Aerodynamics Package"
+      ]
+    },
+    "photoCount": 51
+  }
+}

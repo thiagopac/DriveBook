@@ -1,0 +1,265 @@
+{
+  "total": 5,
+  "data": [
+    {
+      "vin": "WP0AF2A91SS279431",
+      "vehicle": {
+        "baseInvoice": 217170,
+        "baseMsrp": 241300,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "4.0L 6Cyl Gasoline",
+        "exteriorColor": "Green",
+        "fuel": "Gasoline",
+        "interiorColor": "Tan",
+        "make": "Porsche",
+        "model": "911",
+        "seats": 2,
+        "series": "GT3 RS 2dr Coupe (4.0L 6cyl 7AM)",
+        "squishVin": "WP0AF2A9SS",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "GT3 RS",
+        "type": "Coupe",
+        "vin": "WP0AF2A91SS279431",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Costa Mesa",
+        "cpo": false,
+        "dealer": "EuroCar",
+        "miles": 57,
+        "photoCount": 51,
+        "price": 759999,
+        "primaryImage": "https://api.auto.dev/photos/retail/WP0AF2A91SS279431-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "92626"
+      },
+      "appSpecs": {
+        "horsepower": 518,
+        "acceleration": "3.2s",
+        "topSpeed": "296 km/h",
+        "fuelEconomy": "13.1 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 911 GT3 RS is built for performance. With sharper handling, increased downforce and a naturally aspirated engine, it delivers an unmatched driving experience.",
+        "keyFeatures": [
+          "4.0L Naturally Aspirated Flat-6",
+          "7-speed PDK Transmission",
+          "Rear-Wheel Drive",
+          "Carbon Fiber Aerodynamics Package"
+        ]
+      }
+    },
+    {
+      "vin": "ZHWUC1ZM0SLA02427",
+      "vehicle": {
+        "baseMsrp": 604363,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 12,
+        "doors": 2,
+        "drivetrain": "AWD",
+        "engine": "6.5L 12Cyl premium unleaded (required)",
+        "exteriorColor": "White",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Lamborghini",
+        "model": "Revuelto",
+        "seats": 2,
+        "series": "2dr Coupe AWD (6.5L 12cyl gas/electric plug-in hybrid 8AM)",
+        "squishVin": "ZHWUC1ZMSL",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "Unspecified",
+        "type": "Coupe",
+        "vin": "ZHWUC1ZM0SLA02427",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "West Palm Beach",
+        "cpo": true,
+        "dealer": "Lamborghini Palm Beach",
+        "miles": 142,
+        "photoCount": 39,
+        "price": 699951,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZHWUC1ZM0SLA02427-1.jpg",
+        "state": "FL",
+        "used": true,
+        "zip": "33409"
+      },
+      "appSpecs": {
+        "horsepower": 1001,
+        "acceleration": "2.5s",
+        "topSpeed": "350 km/h",
+        "fuelEconomy": "13.3 L/100km",
+        "drivetrain": "AWD",
+        "category": "Sports Car",
+        "description": "The Revuelto combines a 6.5L V12 with three electric motors for a combined output exceeding 1,000 HP. Lamborghini's most powerful production car ever.",
+        "keyFeatures": [
+          "6.5L V12 + 3 Electric Motors",
+          "Plug-in Hybrid System",
+          "All-Wheel Drive",
+          "Active Aerodynamics Package"
+        ]
+      }
+    },
+    {
+      "vin": "ZFF01SMA0S0313341",
+      "vehicle": {
+        "bodyStyle": "Convertible",
+        "confidence": 0.005,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl Plug-In Hybrid",
+        "exteriorColor": "Blue",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Tan",
+        "make": "Ferrari",
+        "model": "296 GTS",
+        "seats": 2,
+        "squishVin": "ZFF01SMAS0",
+        "transmission": "Automatic",
+        "trim": "Unspecified",
+        "type": "Convertible",
+        "vin": "ZFF01SMA0S0313341",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Torrance",
+        "cpo": true,
+        "dealer": "Ferrari South Bay",
+        "miles": 720,
+        "photoCount": 131,
+        "price": 439900,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZFF01SMA0S0313341-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "90505"
+      },
+      "appSpecs": {
+        "horsepower": 830,
+        "acceleration": "2.9s",
+        "topSpeed": "330 km/h",
+        "fuelEconomy": "8.5 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 296 GTS combines a 3.0L twin-turbo V6 with an electric motor for breathtaking open-top performance. Ferrari's most exciting plug-in hybrid yet.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo V6 + Electric Motor",
+          "Plug-in Hybrid Technology",
+          "Rear-Wheel Drive",
+          "Retractable Hardtop"
+        ]
+      }
+    },
+    {
+      "vin": "SBM14ACA0SW009520",
+      "vehicle": {
+        "baseMsrp": 343500,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 8,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "4.0L 8Cyl premium unleaded (required)",
+        "exteriorColor": "Unspecified",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Mclaren",
+        "model": "750S",
+        "seats": 2,
+        "series": "2dr Coupe (4.0L 8cyl Turbo 7AM)",
+        "squishVin": "SBM14ACASW",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "Unspecified",
+        "type": "Coupe",
+        "vin": "SBM14ACA0SW009520",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Newtown Square",
+        "cpo": true,
+        "dealer": "Porsche of The Main Line",
+        "miles": 12468,
+        "photoCount": 108,
+        "price": 334996,
+        "primaryImage": "https://api.auto.dev/photos/retail/SBM14ACA0SW009520-1.jpg",
+        "state": "PA",
+        "used": true,
+        "zip": "19073"
+      },
+      "appSpecs": {
+        "horsepower": 740,
+        "acceleration": "2.8s",
+        "topSpeed": "332 km/h",
+        "fuelEconomy": "14.2 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 750S represents the pinnacle of McLaren engineering. With 740 HP from a 4.0L twin-turbo V8, it delivers supercar performance in a lightweight carbon fiber body.",
+        "keyFeatures": [
+          "4.0L Twin-Turbo V8",
+          "7-speed Dual-Clutch Transmission",
+          "Rear-Wheel Drive",
+          "Carbon Fiber MonoCell Chassis"
+        ]
+      }
+    },
+    {
+      "vin": "SBM16AEA0PW001481",
+      "vehicle": {
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl Plug-In Hybrid",
+        "exteriorColor": "Orange",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "Mclaren",
+        "model": "Artura",
+        "seats": 2,
+        "squishVin": "SBM16AEAPW",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "type": "Coupe",
+        "vin": "SBM16AEA0PW001481",
+        "year": 2023
+      },
+      "retailListing": {
+        "city": "Charlotte",
+        "cpo": false,
+        "dealer": "McLaren Charlotte",
+        "miles": 3210,
+        "photoCount": 34,
+        "price": 182677,
+        "primaryImage": "https://api.auto.dev/photos/retail/SBM16AEA0PW001481-1.jpg",
+        "state": "NC",
+        "used": true,
+        "zip": "28217"
+      },
+      "appSpecs": {
+        "horsepower": 680,
+        "acceleration": "3.0s",
+        "topSpeed": "330 km/h",
+        "fuelEconomy": "7.1 L/100km",
+        "drivetrain": "RWD",
+        "category": "Hybrid",
+        "description": "The Artura is McLaren's first series-production High Performance Hybrid, combining a 3.0L twin-turbo V6 with an electric motor for 680 HP of pure exhilaration.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo V6 + Electric Motor",
+          "Plug-in Hybrid Technology",
+          "Rear-Wheel Drive",
+          "Carbon Fiber Monocoque"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "data": {
+    "vin": "ZHWUC1ZM0SLA02427",
+    "createdAt": "2026-04-30 16:22:09",
+    "vehicle": {
+      "baseMsrp": 604363,
+      "bodyStyle": "Car",
+      "confidence": 0.995,
+      "cylinders": 12,
+      "doors": 2,
+      "drivetrain": "AWD",
+      "engine": "6.5L 12Cyl premium unleaded (required)",
+      "exteriorColor": "White",
+      "fuel": "Gasoline",
+      "interiorColor": "Black",
+      "make": "Lamborghini",
+      "model": "Revuelto",
+      "seats": 2,
+      "series": "2dr Coupe AWD (6.5L 12cyl gas/electric plug-in hybrid 8AM)",
+      "squishVin": "ZHWUC1ZMSL",
+      "style": "Coupe",
+      "transmission": "Automated Manual",
+      "trim": "Unspecified",
+      "type": "Coupe",
+      "vin": "ZHWUC1ZM0SLA02427",
+      "year": 2025
+    },
+    "retailListing": {
+      "city": "West Palm Beach",
+      "cpo": true,
+      "dealer": "Lamborghini Palm Beach",
+      "miles": 142,
+      "photoCount": 39,
+      "price": 699951,
+      "primaryImage": "https://api.auto.dev/photos/retail/ZHWUC1ZM0SLA02427-1.jpg",
+      "state": "FL",
+      "used": true,
+      "zip": "33409"
+    },
+    "history": {
+      "accidentCount": 0,
+      "accidents": false,
+      "oneOwner": false,
+      "ownerCount": 2,
+      "usageType": "Multiple Use"
+    },
+    "appSpecs": {
+      "horsepower": 1001,
+      "acceleration": "2.5s",
+      "topSpeed": "350 km/h",
+      "fuelEconomy": "13.3 L/100km",
+      "drivetrain": "AWD",
+      "category": "Sports Car",
+      "description": "The Revuelto combines a 6.5L V12 with three electric motors for a combined output exceeding 1,000 HP. Lamborghini's most powerful production car ever.",
+      "keyFeatures": [
+        "6.5L V12 + 3 Electric Motors",
+        "Plug-in Hybrid System",
+        "All-Wheel Drive",
+        "Active Aerodynamics Package"
+      ]
+    },
+    "photoCount": 39
+  }
+}

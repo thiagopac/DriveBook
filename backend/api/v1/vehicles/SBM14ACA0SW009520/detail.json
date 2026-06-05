@@ -1,0 +1,65 @@
+{
+  "data": {
+    "vin": "SBM14ACA0SW009520",
+    "createdAt": "2026-04-01 04:57:58",
+    "vehicle": {
+      "baseMsrp": 343500,
+      "bodyStyle": "Car",
+      "confidence": 0.995,
+      "cylinders": 8,
+      "doors": 2,
+      "drivetrain": "RWD",
+      "engine": "4.0L 8Cyl premium unleaded (required)",
+      "exteriorColor": "Unspecified",
+      "fuel": "Gasoline",
+      "interiorColor": "Black",
+      "make": "Mclaren",
+      "model": "750S",
+      "seats": 2,
+      "series": "2dr Coupe (4.0L 8cyl Turbo 7AM)",
+      "squishVin": "SBM14ACASW",
+      "style": "Coupe",
+      "transmission": "Automated Manual",
+      "trim": "Unspecified",
+      "type": "Coupe",
+      "vin": "SBM14ACA0SW009520",
+      "year": 2025
+    },
+    "retailListing": {
+      "city": "Newtown Square",
+      "cpo": true,
+      "dealer": "Porsche of The Main Line",
+      "miles": 12468,
+      "photoCount": 108,
+      "price": 334996,
+      "primaryImage": "https://api.auto.dev/photos/retail/SBM14ACA0SW009520-1.jpg",
+      "state": "PA",
+      "used": true,
+      "zip": "19073"
+    },
+    "history": {
+      "accidentCount": 0,
+      "accidents": false,
+      "oneOwner": true,
+      "ownerCount": 1,
+      "personalUse": true,
+      "usageType": "Personal Use"
+    },
+    "appSpecs": {
+      "horsepower": 740,
+      "acceleration": "2.8s",
+      "topSpeed": "332 km/h",
+      "fuelEconomy": "14.2 L/100km",
+      "drivetrain": "RWD",
+      "category": "Sports Car",
+      "description": "The 750S represents the pinnacle of McLaren engineering. With 740 HP from a 4.0L twin-turbo V8, it delivers supercar performance in a lightweight carbon fiber body.",
+      "keyFeatures": [
+        "4.0L Twin-Turbo V8",
+        "7-speed Dual-Clutch Transmission",
+        "Rear-Wheel Drive",
+        "Carbon Fiber MonoCell Chassis"
+      ]
+    },
+    "photoCount": 108
+  }
+}

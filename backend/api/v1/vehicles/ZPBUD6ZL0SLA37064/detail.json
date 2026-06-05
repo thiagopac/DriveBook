@@ -1,0 +1,61 @@
+{
+  "data": {
+    "vin": "ZPBUD6ZL0SLA37064",
+    "createdAt": "2026-05-13 10:42:47",
+    "vehicle": {
+      "bodyStyle": "SUV",
+      "confidence": 0.005,
+      "cylinders": 8,
+      "doors": 4,
+      "drivetrain": "AWD",
+      "engine": "4.0L 8Cyl Plug-In Hybrid",
+      "exteriorColor": "Blue",
+      "fuel": "Plug-in Hybrid",
+      "interiorColor": "Black",
+      "make": "Lamborghini",
+      "model": "Urus",
+      "seats": 5,
+      "squishVin": "ZPBUD6ZLSL",
+      "transmission": "Automatic",
+      "trim": "SE",
+      "type": "Crossover",
+      "vin": "ZPBUD6ZL0SLA37064",
+      "year": 2025
+    },
+    "retailListing": {
+      "city": "Murrieta",
+      "cpo": false,
+      "dealer": "West Coast Exotic Cars",
+      "miles": 8735,
+      "photoCount": 94,
+      "price": 309960,
+      "primaryImage": "https://api.auto.dev/photos/retail/ZPBUD6ZL0SLA37064-1.jpg",
+      "state": "CA",
+      "used": true,
+      "zip": "92562"
+    },
+    "history": {
+      "accidentCount": 0,
+      "accidents": false,
+      "oneOwner": true,
+      "ownerCount": 1,
+      "usageType": "Corporate Use"
+    },
+    "appSpecs": {
+      "horsepower": 800,
+      "acceleration": "3.4s",
+      "topSpeed": "306 km/h",
+      "fuelEconomy": "9.0 L/100km",
+      "drivetrain": "AWD",
+      "category": "SUV",
+      "description": "The Urus SE elevates super-SUV performance with a plug-in hybrid powertrain delivering 800 HP. Lamborghini's most versatile beast yet.",
+      "keyFeatures": [
+        "4.0L Twin-Turbo V8 + Electric Motor",
+        "Plug-in Hybrid System",
+        "All-Wheel Drive",
+        "Active Torque Vectoring"
+      ]
+    },
+    "photoCount": 94
+  }
+}

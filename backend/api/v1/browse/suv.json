@@ -1,0 +1,156 @@
+{
+  "total": 3,
+  "data": [
+    {
+      "vin": "ZPBUD6ZL0SLA37064",
+      "vehicle": {
+        "bodyStyle": "SUV",
+        "confidence": 0.005,
+        "cylinders": 8,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "4.0L 8Cyl Plug-In Hybrid",
+        "exteriorColor": "Blue",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "Lamborghini",
+        "model": "Urus",
+        "seats": 5,
+        "squishVin": "ZPBUD6ZLSL",
+        "transmission": "Automatic",
+        "trim": "SE",
+        "type": "Crossover",
+        "vin": "ZPBUD6ZL0SLA37064",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Murrieta",
+        "cpo": false,
+        "dealer": "West Coast Exotic Cars",
+        "miles": 8735,
+        "photoCount": 94,
+        "price": 309960,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZPBUD6ZL0SLA37064-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "92562"
+      },
+      "appSpecs": {
+        "horsepower": 800,
+        "acceleration": "3.4s",
+        "topSpeed": "306 km/h",
+        "fuelEconomy": "9.0 L/100km",
+        "drivetrain": "AWD",
+        "category": "SUV",
+        "description": "The Urus SE elevates super-SUV performance with a plug-in hybrid powertrain delivering 800 HP. Lamborghini's most versatile beast yet.",
+        "keyFeatures": [
+          "4.0L Twin-Turbo V8 + Electric Motor",
+          "Plug-in Hybrid System",
+          "All-Wheel Drive",
+          "Active Torque Vectoring"
+        ]
+      }
+    },
+    {
+      "vin": "WP1AG2AY0SDA25474",
+      "vehicle": {
+        "baseInvoice": 112410,
+        "baseMsrp": 124900,
+        "bodyStyle": "SUV",
+        "confidence": 0.995,
+        "cylinders": 8,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "4.0L 8Cyl premium unleaded (required)",
+        "exteriorColor": "White",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Porsche",
+        "model": "Cayenne",
+        "seats": 5,
+        "series": "GTS 4dr SUV AWD (4.0L 8cyl Turbo 8A)",
+        "squishVin": "WP1AG2AYSD",
+        "style": "4dr SUV",
+        "transmission": "Automatic",
+        "trim": "GTS",
+        "type": "Crossover",
+        "vin": "WP1AG2AY0SDA25474",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Schaumburg",
+        "cpo": false,
+        "dealer": "Strada Motorsports",
+        "miles": 12095,
+        "photoCount": 1,
+        "price": 124900,
+        "primaryImage": "https://api.auto.dev/photos/retail/WP1AG2AY0SDA25474-1.jpg",
+        "state": "IL",
+        "used": true,
+        "zip": "60193"
+      },
+      "appSpecs": {
+        "horsepower": 500,
+        "acceleration": "3.7s",
+        "topSpeed": "285 km/h",
+        "fuelEconomy": "12.0 L/100km",
+        "drivetrain": "AWD",
+        "category": "SUV",
+        "description": "The Cayenne GTS strikes the perfect balance between luxury and performance with a twin-turbocharged V8 and sport-tuned suspension for an exhilarating drive.",
+        "keyFeatures": [
+          "4.0L Twin-Turbo V8",
+          "8-speed Tiptronic S",
+          "All-Wheel Drive",
+          "GTS Sport Package"
+        ]
+      }
+    },
+    {
+      "vin": "7SAXCDE53SF467194",
+      "vehicle": {
+        "baseMsrp": 84990,
+        "bodyStyle": "SUV",
+        "confidence": 0.995,
+        "doors": 4,
+        "engine": "electric",
+        "exteriorColor": "White",
+        "fuel": "Electric",
+        "interiorColor": "Other",
+        "make": "Tesla",
+        "model": "Model X",
+        "seats": 7,
+        "series": "4dr SUV AWD (electric DD)",
+        "squishVin": "7SAXCDE5SF",
+        "style": "4dr SUV",
+        "transmission": "Direct Drive",
+        "type": "Crossover",
+        "vin": "7SAXCDE53SF467194",
+        "year": 2025
+      },
+      "retailListing": {
+        "dealer": "Carvana",
+        "miles": 9802,
+        "photoCount": 1,
+        "price": 74590,
+        "primaryImage": "https://api.auto.dev/photos/retail/7SAXCDE53SF467194-1.jpg",
+        "used": true,
+        "vdp": "https://www.carvana.com/vehicle/4266102"
+      },
+      "appSpecs": {
+        "horsepower": 670,
+        "acceleration": "3.8s",
+        "topSpeed": "250 km/h",
+        "fuelEconomy": "Electric - 576 km range",
+        "drivetrain": "AWD",
+        "category": "Electric",
+        "description": "The Tesla Model X redefines what an SUV can be. With falcon-wing doors, 7-seat capacity, and 670 HP, it's the world's fastest SUV in its class.",
+        "keyFeatures": [
+          "Dual Electric Motors",
+          "Falcon-Wing Rear Doors",
+          "All-Wheel Drive",
+          "17-inch Cinematic Display"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,627 @@
+{
+  "total": 12,
+  "data": [
+    {
+      "vin": "WP0AF2A91SS279431",
+      "vehicle": {
+        "baseInvoice": 217170,
+        "baseMsrp": 241300,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "4.0L 6Cyl Gasoline",
+        "exteriorColor": "Green",
+        "fuel": "Gasoline",
+        "interiorColor": "Tan",
+        "make": "Porsche",
+        "model": "911",
+        "seats": 2,
+        "series": "GT3 RS 2dr Coupe (4.0L 6cyl 7AM)",
+        "squishVin": "WP0AF2A9SS",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "GT3 RS",
+        "type": "Coupe",
+        "vin": "WP0AF2A91SS279431",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Costa Mesa",
+        "cpo": false,
+        "dealer": "EuroCar",
+        "miles": 57,
+        "photoCount": 51,
+        "price": 759999,
+        "primaryImage": "https://api.auto.dev/photos/retail/WP0AF2A91SS279431-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "92626"
+      },
+      "appSpecs": {
+        "horsepower": 518,
+        "acceleration": "3.2s",
+        "topSpeed": "296 km/h",
+        "fuelEconomy": "13.1 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 911 GT3 RS is built for performance. With sharper handling, increased downforce and a naturally aspirated engine, it delivers an unmatched driving experience.",
+        "keyFeatures": [
+          "4.0L Naturally Aspirated Flat-6",
+          "7-speed PDK Transmission",
+          "Rear-Wheel Drive",
+          "Carbon Fiber Aerodynamics Package"
+        ]
+      }
+    },
+    {
+      "vin": "ZHWUC1ZM0SLA02427",
+      "vehicle": {
+        "baseMsrp": 604363,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 12,
+        "doors": 2,
+        "drivetrain": "AWD",
+        "engine": "6.5L 12Cyl premium unleaded (required)",
+        "exteriorColor": "White",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Lamborghini",
+        "model": "Revuelto",
+        "seats": 2,
+        "series": "2dr Coupe AWD (6.5L 12cyl gas/electric plug-in hybrid 8AM)",
+        "squishVin": "ZHWUC1ZMSL",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "Unspecified",
+        "type": "Coupe",
+        "vin": "ZHWUC1ZM0SLA02427",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "West Palm Beach",
+        "cpo": true,
+        "dealer": "Lamborghini Palm Beach",
+        "miles": 142,
+        "photoCount": 39,
+        "price": 699951,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZHWUC1ZM0SLA02427-1.jpg",
+        "state": "FL",
+        "used": true,
+        "zip": "33409"
+      },
+      "appSpecs": {
+        "horsepower": 1001,
+        "acceleration": "2.5s",
+        "topSpeed": "350 km/h",
+        "fuelEconomy": "13.3 L/100km",
+        "drivetrain": "AWD",
+        "category": "Sports Car",
+        "description": "The Revuelto combines a 6.5L V12 with three electric motors for a combined output exceeding 1,000 HP. Lamborghini's most powerful production car ever.",
+        "keyFeatures": [
+          "6.5L V12 + 3 Electric Motors",
+          "Plug-in Hybrid System",
+          "All-Wheel Drive",
+          "Active Aerodynamics Package"
+        ]
+      }
+    },
+    {
+      "vin": "ZFF01SMA0S0313341",
+      "vehicle": {
+        "bodyStyle": "Convertible",
+        "confidence": 0.005,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl Plug-In Hybrid",
+        "exteriorColor": "Blue",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Tan",
+        "make": "Ferrari",
+        "model": "296 GTS",
+        "seats": 2,
+        "squishVin": "ZFF01SMAS0",
+        "transmission": "Automatic",
+        "trim": "Unspecified",
+        "type": "Convertible",
+        "vin": "ZFF01SMA0S0313341",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Torrance",
+        "cpo": true,
+        "dealer": "Ferrari South Bay",
+        "miles": 720,
+        "photoCount": 131,
+        "price": 439900,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZFF01SMA0S0313341-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "90505"
+      },
+      "appSpecs": {
+        "horsepower": 830,
+        "acceleration": "2.9s",
+        "topSpeed": "330 km/h",
+        "fuelEconomy": "8.5 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 296 GTS combines a 3.0L twin-turbo V6 with an electric motor for breathtaking open-top performance. Ferrari's most exciting plug-in hybrid yet.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo V6 + Electric Motor",
+          "Plug-in Hybrid Technology",
+          "Rear-Wheel Drive",
+          "Retractable Hardtop"
+        ]
+      }
+    },
+    {
+      "vin": "WBS13HJ01SFT79303",
+      "vehicle": {
+        "baseInvoice": 71830,
+        "baseMsrp": 76700,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 4,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl premium unleaded (required)",
+        "exteriorColor": "Gray",
+        "fuel": "Gasoline",
+        "interiorColor": "Orange",
+        "make": "BMW",
+        "model": "M3",
+        "seats": 5,
+        "series": "4dr Sedan (3.0L 6cyl Turbo 6M)",
+        "squishVin": "WBS13HJ0SF",
+        "style": "Sedan",
+        "transmission": "Manual",
+        "trim": "Competition",
+        "type": "Luxury",
+        "vin": "WBS13HJ01SFT79303",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Greenwood",
+        "cpo": false,
+        "dealer": "Dreyer & Reinbold BMW",
+        "miles": 1874,
+        "photoCount": 34,
+        "price": 85500,
+        "primaryImage": "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-1.jpg",
+        "state": "IN",
+        "used": true,
+        "zip": "46143"
+      },
+      "appSpecs": {
+        "horsepower": 503,
+        "acceleration": "3.5s",
+        "topSpeed": "306 km/h",
+        "fuelEconomy": "10.5 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sedan",
+        "description": "The BMW M3 Competition is the pinnacle of sports sedans, combining daily usability with track-ready performance. Every detail engineered for driving perfection.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo Inline-6",
+          "6-speed Manual Transmission",
+          "Rear-Wheel Drive",
+          "M Carbon Bucket Seats"
+        ]
+      }
+    },
+    {
+      "vin": "SBM14ACA0SW009520",
+      "vehicle": {
+        "baseMsrp": 343500,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 8,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "4.0L 8Cyl premium unleaded (required)",
+        "exteriorColor": "Unspecified",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Mclaren",
+        "model": "750S",
+        "seats": 2,
+        "series": "2dr Coupe (4.0L 8cyl Turbo 7AM)",
+        "squishVin": "SBM14ACASW",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "Unspecified",
+        "type": "Coupe",
+        "vin": "SBM14ACA0SW009520",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Newtown Square",
+        "cpo": true,
+        "dealer": "Porsche of The Main Line",
+        "miles": 12468,
+        "photoCount": 108,
+        "price": 334996,
+        "primaryImage": "https://api.auto.dev/photos/retail/SBM14ACA0SW009520-1.jpg",
+        "state": "PA",
+        "used": true,
+        "zip": "19073"
+      },
+      "appSpecs": {
+        "horsepower": 740,
+        "acceleration": "2.8s",
+        "topSpeed": "332 km/h",
+        "fuelEconomy": "14.2 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 750S represents the pinnacle of McLaren engineering. With 740 HP from a 4.0L twin-turbo V8, it delivers supercar performance in a lightweight carbon fiber body.",
+        "keyFeatures": [
+          "4.0L Twin-Turbo V8",
+          "7-speed Dual-Clutch Transmission",
+          "Rear-Wheel Drive",
+          "Carbon Fiber MonoCell Chassis"
+        ]
+      }
+    },
+    {
+      "vin": "ZPBUD6ZL0SLA37064",
+      "vehicle": {
+        "bodyStyle": "SUV",
+        "confidence": 0.005,
+        "cylinders": 8,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "4.0L 8Cyl Plug-In Hybrid",
+        "exteriorColor": "Blue",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "Lamborghini",
+        "model": "Urus",
+        "seats": 5,
+        "squishVin": "ZPBUD6ZLSL",
+        "transmission": "Automatic",
+        "trim": "SE",
+        "type": "Crossover",
+        "vin": "ZPBUD6ZL0SLA37064",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Murrieta",
+        "cpo": false,
+        "dealer": "West Coast Exotic Cars",
+        "miles": 8735,
+        "photoCount": 94,
+        "price": 309960,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZPBUD6ZL0SLA37064-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "92562"
+      },
+      "appSpecs": {
+        "horsepower": 800,
+        "acceleration": "3.4s",
+        "topSpeed": "306 km/h",
+        "fuelEconomy": "9.0 L/100km",
+        "drivetrain": "AWD",
+        "category": "SUV",
+        "description": "The Urus SE elevates super-SUV performance with a plug-in hybrid powertrain delivering 800 HP. Lamborghini's most versatile beast yet.",
+        "keyFeatures": [
+          "4.0L Twin-Turbo V8 + Electric Motor",
+          "Plug-in Hybrid System",
+          "All-Wheel Drive",
+          "Active Torque Vectoring"
+        ]
+      }
+    },
+    {
+      "vin": "WP1AG2AY0SDA25474",
+      "vehicle": {
+        "baseInvoice": 112410,
+        "baseMsrp": 124900,
+        "bodyStyle": "SUV",
+        "confidence": 0.995,
+        "cylinders": 8,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "4.0L 8Cyl premium unleaded (required)",
+        "exteriorColor": "White",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Porsche",
+        "model": "Cayenne",
+        "seats": 5,
+        "series": "GTS 4dr SUV AWD (4.0L 8cyl Turbo 8A)",
+        "squishVin": "WP1AG2AYSD",
+        "style": "4dr SUV",
+        "transmission": "Automatic",
+        "trim": "GTS",
+        "type": "Crossover",
+        "vin": "WP1AG2AY0SDA25474",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Schaumburg",
+        "cpo": false,
+        "dealer": "Strada Motorsports",
+        "miles": 12095,
+        "photoCount": 1,
+        "price": 124900,
+        "primaryImage": "https://api.auto.dev/photos/retail/WP1AG2AY0SDA25474-1.jpg",
+        "state": "IL",
+        "used": true,
+        "zip": "60193"
+      },
+      "appSpecs": {
+        "horsepower": 500,
+        "acceleration": "3.7s",
+        "topSpeed": "285 km/h",
+        "fuelEconomy": "12.0 L/100km",
+        "drivetrain": "AWD",
+        "category": "SUV",
+        "description": "The Cayenne GTS strikes the perfect balance between luxury and performance with a twin-turbocharged V8 and sport-tuned suspension for an exhilarating drive.",
+        "keyFeatures": [
+          "4.0L Twin-Turbo V8",
+          "8-speed Tiptronic S",
+          "All-Wheel Drive",
+          "GTS Sport Package"
+        ]
+      }
+    },
+    {
+      "vin": "WA124BGF8SA006865",
+      "vehicle": {
+        "baseInvoice": 66365,
+        "baseMsrp": 70600,
+        "bodyStyle": "SUV",
+        "confidence": 0.995,
+        "cylinders": 0,
+        "doors": 4,
+        "engine": "0Cyl electric",
+        "exteriorColor": "Gray",
+        "fuel": "Electric",
+        "interiorColor": "Black",
+        "make": "Audi",
+        "model": "Q6 e-tron",
+        "seats": 5,
+        "series": "Premium Plus 4dr SUV AWD (electric DD)",
+        "squishVin": "WA124BGFSA",
+        "style": "4dr SUV",
+        "transmission": "Direct Drive",
+        "trim": "Premium Plus",
+        "type": "Crossover",
+        "vin": "WA124BGF8SA006865",
+        "year": 2025
+      },
+      "retailListing": {
+        "cpo": false,
+        "dealer": "Carvana",
+        "miles": 4352,
+        "photoCount": 1,
+        "price": 50990,
+        "primaryImage": "https://api.auto.dev/photos/retail/WA124BGF8SA006865-1.jpg",
+        "used": true,
+        "vdp": "https://www.carvana.com/vehicle/4442566"
+      },
+      "appSpecs": {
+        "horsepower": 489,
+        "acceleration": "4.3s",
+        "topSpeed": "210 km/h",
+        "fuelEconomy": "Electric - 545 km range",
+        "drivetrain": "AWD",
+        "category": "Electric",
+        "description": "The Q6 e-tron pioneers Audi's PPE platform, offering 545 km of range with 800V fast charging. A new era of electric luxury performance SUVs.",
+        "keyFeatures": [
+          "Dual Electric Motors",
+          "800V Fast Charging Architecture",
+          "All-Wheel Drive",
+          "Augmented Reality HUD"
+        ]
+      }
+    },
+    {
+      "vin": "WBY43HD0XSFU69399",
+      "vehicle": {
+        "baseInvoice": 58440,
+        "baseMsrp": 62300,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "electric",
+        "exteriorColor": "Black",
+        "fuel": "Electric",
+        "interiorColor": "Brown",
+        "make": "BMW",
+        "model": "i4",
+        "seats": 5,
+        "series": "xDrive40 4dr Sedan AWD (electric DD)",
+        "squishVin": "WBY43HD0SF",
+        "style": "Sedan",
+        "transmission": "Direct Drive",
+        "trim": "xDrive40",
+        "type": "Electric",
+        "vin": "WBY43HD0XSFU69399",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Indianapolis",
+        "cpo": false,
+        "dealer": "Carvana",
+        "miles": 6265,
+        "photoCount": 54,
+        "price": 53590,
+        "primaryImage": "https://api.auto.dev/photos/retail/WBY43HD0XSFU69399-1.jpg",
+        "state": "IN",
+        "used": true,
+        "zip": "46202",
+        "vdp": "https://www.carvana.com/vehicle/4272297"
+      },
+      "appSpecs": {
+        "horsepower": 536,
+        "acceleration": "3.9s",
+        "topSpeed": "227 km/h",
+        "fuelEconomy": "Electric - 477 km range",
+        "drivetrain": "AWD",
+        "category": "Electric",
+        "description": "The BMW i4 M50 delivers the driving joy of an M car with zero emissions. Precise handling, instant torque, and a 477 km range make it the electric sports sedan to beat.",
+        "keyFeatures": [
+          "Dual Electric Motors",
+          "DC Fast Charging 205 kW",
+          "All-Wheel Drive",
+          "M Sport Package"
+        ]
+      }
+    },
+    {
+      "vin": "7SAXCDE53SF467194",
+      "vehicle": {
+        "baseMsrp": 84990,
+        "bodyStyle": "SUV",
+        "confidence": 0.995,
+        "doors": 4,
+        "engine": "electric",
+        "exteriorColor": "White",
+        "fuel": "Electric",
+        "interiorColor": "Other",
+        "make": "Tesla",
+        "model": "Model X",
+        "seats": 7,
+        "series": "4dr SUV AWD (electric DD)",
+        "squishVin": "7SAXCDE5SF",
+        "style": "4dr SUV",
+        "transmission": "Direct Drive",
+        "type": "Crossover",
+        "vin": "7SAXCDE53SF467194",
+        "year": 2025
+      },
+      "retailListing": {
+        "dealer": "Carvana",
+        "miles": 9802,
+        "photoCount": 1,
+        "price": 74590,
+        "primaryImage": "https://api.auto.dev/photos/retail/7SAXCDE53SF467194-1.jpg",
+        "used": true,
+        "vdp": "https://www.carvana.com/vehicle/4266102"
+      },
+      "appSpecs": {
+        "horsepower": 670,
+        "acceleration": "3.8s",
+        "topSpeed": "250 km/h",
+        "fuelEconomy": "Electric - 576 km range",
+        "drivetrain": "AWD",
+        "category": "Electric",
+        "description": "The Tesla Model X redefines what an SUV can be. With falcon-wing doors, 7-seat capacity, and 670 HP, it's the world's fastest SUV in its class.",
+        "keyFeatures": [
+          "Dual Electric Motors",
+          "Falcon-Wing Rear Doors",
+          "All-Wheel Drive",
+          "17-inch Cinematic Display"
+        ]
+      }
+    },
+    {
+      "vin": "SBM16AEA0PW001481",
+      "vehicle": {
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl Plug-In Hybrid",
+        "exteriorColor": "Orange",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "Mclaren",
+        "model": "Artura",
+        "seats": 2,
+        "squishVin": "SBM16AEAPW",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "type": "Coupe",
+        "vin": "SBM16AEA0PW001481",
+        "year": 2023
+      },
+      "retailListing": {
+        "city": "Charlotte",
+        "cpo": false,
+        "dealer": "McLaren Charlotte",
+        "miles": 3210,
+        "photoCount": 34,
+        "price": 182677,
+        "primaryImage": "https://api.auto.dev/photos/retail/SBM16AEA0PW001481-1.jpg",
+        "state": "NC",
+        "used": true,
+        "zip": "28217"
+      },
+      "appSpecs": {
+        "horsepower": 680,
+        "acceleration": "3.0s",
+        "topSpeed": "330 km/h",
+        "fuelEconomy": "7.1 L/100km",
+        "drivetrain": "RWD",
+        "category": "Hybrid",
+        "description": "The Artura is McLaren's first series-production High Performance Hybrid, combining a 3.0L twin-turbo V6 with an electric motor for 680 HP of pure exhilaration.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo V6 + Electric Motor",
+          "Plug-in Hybrid Technology",
+          "Rear-Wheel Drive",
+          "Carbon Fiber Monocoque"
+        ]
+      }
+    },
+    {
+      "vin": "WBS83FK01SCT91714",
+      "vehicle": {
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 8,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "4.4L 8Cyl Plug-In Hybrid",
+        "exteriorColor": "Black",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "BMW",
+        "model": "M5",
+        "seats": 5,
+        "series": "4dr Sedan AWD (4.4L 8cyl Turbo gas/electric plug-in hybrid 8AM)",
+        "squishVin": "WBS83FK0SC",
+        "style": "Sedan",
+        "transmission": "Automatic",
+        "trim": "xDrive",
+        "type": "Luxury",
+        "vin": "WBS83FK01SCT91714",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Denver",
+        "cpo": false,
+        "dealer": "BMW of Denver",
+        "miles": 4200,
+        "photoCount": 57,
+        "price": 104000,
+        "primaryImage": "https://api.auto.dev/photos/retail/WBS83FK01SCT91714-1.jpg",
+        "state": "CO",
+        "used": true,
+        "zip": "80202"
+      },
+      "appSpecs": {
+        "horsepower": 727,
+        "acceleration": "3.5s",
+        "topSpeed": "305 km/h",
+        "fuelEconomy": "10.2 L/100km",
+        "drivetrain": "AWD",
+        "category": "Sedan",
+        "description": "The new BMW M5 is a plug-in hybrid super sedan with 727 HP. It conquers the Nurburgring in the morning and the school run in the afternoon.",
+        "keyFeatures": [
+          "4.4L Twin-Turbo V8 + Electric Motor",
+          "Plug-in Hybrid System",
+          "M xDrive All-Wheel Drive",
+          "8-speed M Steptronic"
+        ]
+      }
+    }
+  ]
+}

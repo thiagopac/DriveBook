@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "vin": "WP0AF2A91SS279431",
+      "vehicle": {
+        "baseInvoice": 217170,
+        "baseMsrp": 241300,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "4.0L 6Cyl Gasoline",
+        "exteriorColor": "Green",
+        "fuel": "Gasoline",
+        "interiorColor": "Tan",
+        "make": "Porsche",
+        "model": "911",
+        "seats": 2,
+        "series": "GT3 RS 2dr Coupe (4.0L 6cyl 7AM)",
+        "squishVin": "WP0AF2A9SS",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "GT3 RS",
+        "type": "Coupe",
+        "vin": "WP0AF2A91SS279431",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Costa Mesa",
+        "cpo": false,
+        "dealer": "EuroCar",
+        "miles": 57,
+        "photoCount": 51,
+        "price": 759999,
+        "primaryImage": "https://api.auto.dev/photos/retail/WP0AF2A91SS279431-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "92626"
+      },
+      "appSpecs": {
+        "horsepower": 518,
+        "acceleration": "3.2s",
+        "topSpeed": "296 km/h",
+        "fuelEconomy": "13.1 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 911 GT3 RS is built for performance. With sharper handling, increased downforce and a naturally aspirated engine, it delivers an unmatched driving experience.",
+        "keyFeatures": [
+          "4.0L Naturally Aspirated Flat-6",
+          "7-speed PDK Transmission",
+          "Rear-Wheel Drive",
+          "Carbon Fiber Aerodynamics Package"
+        ]
+      }
+    },
+    {
+      "vin": "ZHWUC1ZM0SLA02427",
+      "vehicle": {
+        "baseMsrp": 604363,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 12,
+        "doors": 2,
+        "drivetrain": "AWD",
+        "engine": "6.5L 12Cyl premium unleaded (required)",
+        "exteriorColor": "White",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Lamborghini",
+        "model": "Revuelto",
+        "seats": 2,
+        "series": "2dr Coupe AWD (6.5L 12cyl gas/electric plug-in hybrid 8AM)",
+        "squishVin": "ZHWUC1ZMSL",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "Unspecified",
+        "type": "Coupe",
+        "vin": "ZHWUC1ZM0SLA02427",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "West Palm Beach",
+        "cpo": true,
+        "dealer": "Lamborghini Palm Beach",
+        "miles": 142,
+        "photoCount": 39,
+        "price": 699951,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZHWUC1ZM0SLA02427-1.jpg",
+        "state": "FL",
+        "used": true,
+        "zip": "33409"
+      },
+      "appSpecs": {
+        "horsepower": 1001,
+        "acceleration": "2.5s",
+        "topSpeed": "350 km/h",
+        "fuelEconomy": "13.3 L/100km",
+        "drivetrain": "AWD",
+        "category": "Sports Car",
+        "description": "The Revuelto combines a 6.5L V12 with three electric motors for a combined output exceeding 1,000 HP. Lamborghini's most powerful production car ever.",
+        "keyFeatures": [
+          "6.5L V12 + 3 Electric Motors",
+          "Plug-in Hybrid System",
+          "All-Wheel Drive",
+          "Active Aerodynamics Package"
+        ]
+      }
+    }
+  ]
+}

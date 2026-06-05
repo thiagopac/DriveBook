@@ -1,0 +1,66 @@
+{
+  "data": {
+    "vin": "WBY43HD0XSFU69399",
+    "createdAt": "2026-03-19 04:03:25",
+    "vehicle": {
+      "baseInvoice": 58440,
+      "baseMsrp": 62300,
+      "bodyStyle": "Car",
+      "confidence": 0.995,
+      "doors": 4,
+      "drivetrain": "AWD",
+      "engine": "electric",
+      "exteriorColor": "Black",
+      "fuel": "Electric",
+      "interiorColor": "Brown",
+      "make": "BMW",
+      "model": "i4",
+      "seats": 5,
+      "series": "xDrive40 4dr Sedan AWD (electric DD)",
+      "squishVin": "WBY43HD0SF",
+      "style": "Sedan",
+      "transmission": "Direct Drive",
+      "trim": "xDrive40",
+      "type": "Electric",
+      "vin": "WBY43HD0XSFU69399",
+      "year": 2025
+    },
+    "retailListing": {
+      "city": "Indianapolis",
+      "cpo": false,
+      "dealer": "Carvana",
+      "miles": 6265,
+      "photoCount": 54,
+      "price": 53590,
+      "primaryImage": "https://api.auto.dev/photos/retail/WBY43HD0XSFU69399-1.jpg",
+      "state": "IN",
+      "used": true,
+      "zip": "46202",
+      "vdp": "https://www.carvana.com/vehicle/4272297"
+    },
+    "history": {
+      "accidentCount": 0,
+      "accidents": false,
+      "oneOwner": true,
+      "ownerCount": 1,
+      "personalUse": true,
+      "usageType": "Lease"
+    },
+    "appSpecs": {
+      "horsepower": 536,
+      "acceleration": "3.9s",
+      "topSpeed": "227 km/h",
+      "fuelEconomy": "Electric - 477 km range",
+      "drivetrain": "AWD",
+      "category": "Electric",
+      "description": "The BMW i4 M50 delivers the driving joy of an M car with zero emissions. Precise handling, instant torque, and a 477 km range make it the electric sports sedan to beat.",
+      "keyFeatures": [
+        "Dual Electric Motors",
+        "DC Fast Charging 205 kW",
+        "All-Wheel Drive",
+        "M Sport Package"
+      ]
+    },
+    "photoCount": 54
+  }
+}

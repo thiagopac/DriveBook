@@ -1,0 +1,161 @@
+{
+  "data": [
+    {
+      "vin": "ZFF01SMA0S0313341",
+      "vehicle": {
+        "bodyStyle": "Convertible",
+        "confidence": 0.005,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl Plug-In Hybrid",
+        "exteriorColor": "Blue",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Tan",
+        "make": "Ferrari",
+        "model": "296 GTS",
+        "seats": 2,
+        "squishVin": "ZFF01SMAS0",
+        "transmission": "Automatic",
+        "trim": "Unspecified",
+        "type": "Convertible",
+        "vin": "ZFF01SMA0S0313341",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Torrance",
+        "cpo": true,
+        "dealer": "Ferrari South Bay",
+        "miles": 720,
+        "photoCount": 131,
+        "price": 439900,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZFF01SMA0S0313341-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "90505"
+      },
+      "appSpecs": {
+        "horsepower": 830,
+        "acceleration": "2.9s",
+        "topSpeed": "330 km/h",
+        "fuelEconomy": "8.5 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 296 GTS combines a 3.0L twin-turbo V6 with an electric motor for breathtaking open-top performance. Ferrari's most exciting plug-in hybrid yet.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo V6 + Electric Motor",
+          "Plug-in Hybrid Technology",
+          "Rear-Wheel Drive",
+          "Retractable Hardtop"
+        ]
+      }
+    },
+    {
+      "vin": "WBS13HJ01SFT79303",
+      "vehicle": {
+        "baseInvoice": 71830,
+        "baseMsrp": 76700,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 4,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl premium unleaded (required)",
+        "exteriorColor": "Gray",
+        "fuel": "Gasoline",
+        "interiorColor": "Orange",
+        "make": "BMW",
+        "model": "M3",
+        "seats": 5,
+        "series": "4dr Sedan (3.0L 6cyl Turbo 6M)",
+        "squishVin": "WBS13HJ0SF",
+        "style": "Sedan",
+        "transmission": "Manual",
+        "trim": "Competition",
+        "type": "Luxury",
+        "vin": "WBS13HJ01SFT79303",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Greenwood",
+        "cpo": false,
+        "dealer": "Dreyer & Reinbold BMW",
+        "miles": 1874,
+        "photoCount": 34,
+        "price": 85500,
+        "primaryImage": "https://api.auto.dev/photos/retail/WBS13HJ01SFT79303-1.jpg",
+        "state": "IN",
+        "used": true,
+        "zip": "46143"
+      },
+      "appSpecs": {
+        "horsepower": 503,
+        "acceleration": "3.5s",
+        "topSpeed": "306 km/h",
+        "fuelEconomy": "10.5 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sedan",
+        "description": "The BMW M3 Competition is the pinnacle of sports sedans, combining daily usability with track-ready performance. Every detail engineered for driving perfection.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo Inline-6",
+          "6-speed Manual Transmission",
+          "Rear-Wheel Drive",
+          "M Carbon Bucket Seats"
+        ]
+      }
+    },
+    {
+      "vin": "SBM14ACA0SW009520",
+      "vehicle": {
+        "baseMsrp": 343500,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 8,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "4.0L 8Cyl premium unleaded (required)",
+        "exteriorColor": "Unspecified",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Mclaren",
+        "model": "750S",
+        "seats": 2,
+        "series": "2dr Coupe (4.0L 8cyl Turbo 7AM)",
+        "squishVin": "SBM14ACASW",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "Unspecified",
+        "type": "Coupe",
+        "vin": "SBM14ACA0SW009520",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Newtown Square",
+        "cpo": true,
+        "dealer": "Porsche of The Main Line",
+        "miles": 12468,
+        "photoCount": 108,
+        "price": 334996,
+        "primaryImage": "https://api.auto.dev/photos/retail/SBM14ACA0SW009520-1.jpg",
+        "state": "PA",
+        "used": true,
+        "zip": "19073"
+      },
+      "appSpecs": {
+        "horsepower": 740,
+        "acceleration": "2.8s",
+        "topSpeed": "332 km/h",
+        "fuelEconomy": "14.2 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 750S represents the pinnacle of McLaren engineering. With 740 HP from a 4.0L twin-turbo V8, it delivers supercar performance in a lightweight carbon fiber body.",
+        "keyFeatures": [
+          "4.0L Twin-Turbo V8",
+          "7-speed Dual-Clutch Transmission",
+          "Rear-Wheel Drive",
+          "Carbon Fiber MonoCell Chassis"
+        ]
+      }
+    }
+  ]
+}

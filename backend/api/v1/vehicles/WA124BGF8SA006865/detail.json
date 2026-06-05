@@ -1,0 +1,56 @@
+{
+  "data": {
+    "vin": "WA124BGF8SA006865",
+    "createdAt": "2026-05-29 20:00:36",
+    "vehicle": {
+      "baseInvoice": 66365,
+      "baseMsrp": 70600,
+      "bodyStyle": "SUV",
+      "confidence": 0.995,
+      "cylinders": 0,
+      "doors": 4,
+      "engine": "0Cyl electric",
+      "exteriorColor": "Gray",
+      "fuel": "Electric",
+      "interiorColor": "Black",
+      "make": "Audi",
+      "model": "Q6 e-tron",
+      "seats": 5,
+      "series": "Premium Plus 4dr SUV AWD (electric DD)",
+      "squishVin": "WA124BGFSA",
+      "style": "4dr SUV",
+      "transmission": "Direct Drive",
+      "trim": "Premium Plus",
+      "type": "Crossover",
+      "vin": "WA124BGF8SA006865",
+      "year": 2025
+    },
+    "retailListing": {
+      "cpo": false,
+      "dealer": "Carvana",
+      "miles": 4352,
+      "photoCount": 1,
+      "price": 50990,
+      "primaryImage": "https://api.auto.dev/photos/retail/WA124BGF8SA006865-1.jpg",
+      "used": true,
+      "vdp": "https://www.carvana.com/vehicle/4442566"
+    },
+    "history": null,
+    "appSpecs": {
+      "horsepower": 489,
+      "acceleration": "4.3s",
+      "topSpeed": "210 km/h",
+      "fuelEconomy": "Electric - 545 km range",
+      "drivetrain": "AWD",
+      "category": "Electric",
+      "description": "The Q6 e-tron pioneers Audi's PPE platform, offering 545 km of range with 800V fast charging. A new era of electric luxury performance SUVs.",
+      "keyFeatures": [
+        "Dual Electric Motors",
+        "800V Fast Charging Architecture",
+        "All-Wheel Drive",
+        "Augmented Reality HUD"
+      ]
+    },
+    "photoCount": 1
+  }
+}

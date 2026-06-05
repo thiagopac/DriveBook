@@ -1,0 +1,260 @@
+{
+  "total": 5,
+  "data": [
+    {
+      "vin": "ZHWUC1ZM0SLA02427",
+      "vehicle": {
+        "baseMsrp": 604363,
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 12,
+        "doors": 2,
+        "drivetrain": "AWD",
+        "engine": "6.5L 12Cyl premium unleaded (required)",
+        "exteriorColor": "White",
+        "fuel": "Gasoline",
+        "interiorColor": "Black",
+        "make": "Lamborghini",
+        "model": "Revuelto",
+        "seats": 2,
+        "series": "2dr Coupe AWD (6.5L 12cyl gas/electric plug-in hybrid 8AM)",
+        "squishVin": "ZHWUC1ZMSL",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "trim": "Unspecified",
+        "type": "Coupe",
+        "vin": "ZHWUC1ZM0SLA02427",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "West Palm Beach",
+        "cpo": true,
+        "dealer": "Lamborghini Palm Beach",
+        "miles": 142,
+        "photoCount": 39,
+        "price": 699951,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZHWUC1ZM0SLA02427-1.jpg",
+        "state": "FL",
+        "used": true,
+        "zip": "33409"
+      },
+      "appSpecs": {
+        "horsepower": 1001,
+        "acceleration": "2.5s",
+        "topSpeed": "350 km/h",
+        "fuelEconomy": "13.3 L/100km",
+        "drivetrain": "AWD",
+        "category": "Sports Car",
+        "description": "The Revuelto combines a 6.5L V12 with three electric motors for a combined output exceeding 1,000 HP. Lamborghini's most powerful production car ever.",
+        "keyFeatures": [
+          "6.5L V12 + 3 Electric Motors",
+          "Plug-in Hybrid System",
+          "All-Wheel Drive",
+          "Active Aerodynamics Package"
+        ]
+      }
+    },
+    {
+      "vin": "ZFF01SMA0S0313341",
+      "vehicle": {
+        "bodyStyle": "Convertible",
+        "confidence": 0.005,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl Plug-In Hybrid",
+        "exteriorColor": "Blue",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Tan",
+        "make": "Ferrari",
+        "model": "296 GTS",
+        "seats": 2,
+        "squishVin": "ZFF01SMAS0",
+        "transmission": "Automatic",
+        "trim": "Unspecified",
+        "type": "Convertible",
+        "vin": "ZFF01SMA0S0313341",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Torrance",
+        "cpo": true,
+        "dealer": "Ferrari South Bay",
+        "miles": 720,
+        "photoCount": 131,
+        "price": 439900,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZFF01SMA0S0313341-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "90505"
+      },
+      "appSpecs": {
+        "horsepower": 830,
+        "acceleration": "2.9s",
+        "topSpeed": "330 km/h",
+        "fuelEconomy": "8.5 L/100km",
+        "drivetrain": "RWD",
+        "category": "Sports Car",
+        "description": "The 296 GTS combines a 3.0L twin-turbo V6 with an electric motor for breathtaking open-top performance. Ferrari's most exciting plug-in hybrid yet.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo V6 + Electric Motor",
+          "Plug-in Hybrid Technology",
+          "Rear-Wheel Drive",
+          "Retractable Hardtop"
+        ]
+      }
+    },
+    {
+      "vin": "ZPBUD6ZL0SLA37064",
+      "vehicle": {
+        "bodyStyle": "SUV",
+        "confidence": 0.005,
+        "cylinders": 8,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "4.0L 8Cyl Plug-In Hybrid",
+        "exteriorColor": "Blue",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "Lamborghini",
+        "model": "Urus",
+        "seats": 5,
+        "squishVin": "ZPBUD6ZLSL",
+        "transmission": "Automatic",
+        "trim": "SE",
+        "type": "Crossover",
+        "vin": "ZPBUD6ZL0SLA37064",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Murrieta",
+        "cpo": false,
+        "dealer": "West Coast Exotic Cars",
+        "miles": 8735,
+        "photoCount": 94,
+        "price": 309960,
+        "primaryImage": "https://api.auto.dev/photos/retail/ZPBUD6ZL0SLA37064-1.jpg",
+        "state": "CA",
+        "used": true,
+        "zip": "92562"
+      },
+      "appSpecs": {
+        "horsepower": 800,
+        "acceleration": "3.4s",
+        "topSpeed": "306 km/h",
+        "fuelEconomy": "9.0 L/100km",
+        "drivetrain": "AWD",
+        "category": "SUV",
+        "description": "The Urus SE elevates super-SUV performance with a plug-in hybrid powertrain delivering 800 HP. Lamborghini's most versatile beast yet.",
+        "keyFeatures": [
+          "4.0L Twin-Turbo V8 + Electric Motor",
+          "Plug-in Hybrid System",
+          "All-Wheel Drive",
+          "Active Torque Vectoring"
+        ]
+      }
+    },
+    {
+      "vin": "SBM16AEA0PW001481",
+      "vehicle": {
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 6,
+        "doors": 2,
+        "drivetrain": "RWD",
+        "engine": "3.0L 6Cyl Plug-In Hybrid",
+        "exteriorColor": "Orange",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "Mclaren",
+        "model": "Artura",
+        "seats": 2,
+        "squishVin": "SBM16AEAPW",
+        "style": "Coupe",
+        "transmission": "Automated Manual",
+        "type": "Coupe",
+        "vin": "SBM16AEA0PW001481",
+        "year": 2023
+      },
+      "retailListing": {
+        "city": "Charlotte",
+        "cpo": false,
+        "dealer": "McLaren Charlotte",
+        "miles": 3210,
+        "photoCount": 34,
+        "price": 182677,
+        "primaryImage": "https://api.auto.dev/photos/retail/SBM16AEA0PW001481-1.jpg",
+        "state": "NC",
+        "used": true,
+        "zip": "28217"
+      },
+      "appSpecs": {
+        "horsepower": 680,
+        "acceleration": "3.0s",
+        "topSpeed": "330 km/h",
+        "fuelEconomy": "7.1 L/100km",
+        "drivetrain": "RWD",
+        "category": "Hybrid",
+        "description": "The Artura is McLaren's first series-production High Performance Hybrid, combining a 3.0L twin-turbo V6 with an electric motor for 680 HP of pure exhilaration.",
+        "keyFeatures": [
+          "3.0L Twin-Turbo V6 + Electric Motor",
+          "Plug-in Hybrid Technology",
+          "Rear-Wheel Drive",
+          "Carbon Fiber Monocoque"
+        ]
+      }
+    },
+    {
+      "vin": "WBS83FK01SCT91714",
+      "vehicle": {
+        "bodyStyle": "Car",
+        "confidence": 0.995,
+        "cylinders": 8,
+        "doors": 4,
+        "drivetrain": "AWD",
+        "engine": "4.4L 8Cyl Plug-In Hybrid",
+        "exteriorColor": "Black",
+        "fuel": "Plug-in Hybrid",
+        "interiorColor": "Black",
+        "make": "BMW",
+        "model": "M5",
+        "seats": 5,
+        "series": "4dr Sedan AWD (4.4L 8cyl Turbo gas/electric plug-in hybrid 8AM)",
+        "squishVin": "WBS83FK0SC",
+        "style": "Sedan",
+        "transmission": "Automatic",
+        "trim": "xDrive",
+        "type": "Luxury",
+        "vin": "WBS83FK01SCT91714",
+        "year": 2025
+      },
+      "retailListing": {
+        "city": "Denver",
+        "cpo": false,
+        "dealer": "BMW of Denver",
+        "miles": 4200,
+        "photoCount": 57,
+        "price": 104000,
+        "primaryImage": "https://api.auto.dev/photos/retail/WBS83FK01SCT91714-1.jpg",
+        "state": "CO",
+        "used": true,
+        "zip": "80202"
+      },
+      "appSpecs": {
+        "horsepower": 727,
+        "acceleration": "3.5s",
+        "topSpeed": "305 km/h",
+        "fuelEconomy": "10.2 L/100km",
+        "drivetrain": "AWD",
+        "category": "Sedan",
+        "description": "The new BMW M5 is a plug-in hybrid super sedan with 727 HP. It conquers the Nurburgring in the morning and the school run in the afternoon.",
+        "keyFeatures": [
+          "4.4L Twin-Turbo V8 + Electric Motor",
+          "Plug-in Hybrid System",
+          "M xDrive All-Wheel Drive",
+          "8-speed M Steptronic"
+        ]
+      }
+    }
+  ]
+}
