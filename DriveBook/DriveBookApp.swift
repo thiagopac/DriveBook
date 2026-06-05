@@ -12,7 +12,7 @@ import SwiftUI
 struct DriveBookApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
