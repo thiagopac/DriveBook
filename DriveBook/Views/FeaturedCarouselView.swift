@@ -37,68 +37,74 @@ struct FeaturedCarCard: View {
     let vehicle: VehicleListing
 
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            if let raw = vehicle.retailListing.primaryImage, let url = URL(string: raw) {
-                AsyncImage(url: url) { img in
-                    img.resizable().aspectRatio(contentMode: .fill)
-                } placeholder: {
+        GeometryReader { geo in
+            ZStack(alignment: .bottomLeading) {
+                if let raw = vehicle.retailListing.primaryImage, let url = URL(string: raw) {
+                    AsyncImage(url: url) { img in
+                        img
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: geo.size.width, height: geo.size.height)
+                            .clipped()
+                    } placeholder: {
+                        Color(white: 0.15)
+                            .frame(width: geo.size.width, height: geo.size.height)
+                    }
+                } else {
                     Color(white: 0.15)
+                        .frame(width: geo.size.width, height: geo.size.height)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .clipped()
-            } else {
-                Color(white: 0.15)
-            }
 
-            LinearGradient(
-                colors: [.clear, .black.opacity(0.85)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
+                LinearGradient(
+                    colors: [.clear, .black.opacity(0.85)],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .frame(width: geo.size.width, height: geo.size.height)
 
-            VStack(alignment: .leading, spacing: 4) {
-                Text(vehicle.vehicle.make.uppercased())
-                    .font(.system(size: 11, weight: .semibold))
-                    .foregroundStyle(.white.opacity(0.65))
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(vehicle.vehicle.make.uppercased())
+                        .font(.system(size: 11, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.65))
 
-                Text(vehicle.vehicle.displayModelName)
-                    .font(.system(size: 22, weight: .bold))
-                    .foregroundStyle(.white)
-                    .lineLimit(1)
-
-                Text(String(vehicle.vehicle.year))
-                    .font(.system(size: 13))
-                    .foregroundStyle(.white.opacity(0.65))
-
-                HStack(spacing: 20) {
-                    if let hp = vehicle.appSpecs.horsepower {
-                        statView(value: "\(hp) HP", label: "POWER")
-                    }
-                    if let acc = vehicle.appSpecs.acceleration {
-                        statView(value: acc, label: "0-100 KM/H")
-                    }
-                }
-                .padding(.top, 2)
-
-                HStack(spacing: 10) {
-                    Text("View details")
-                        .font(.system(size: 14, weight: .semibold))
+                    Text(vehicle.vehicle.displayModelName)
+                        .font(.system(size: 22, weight: .bold))
                         .foregroundStyle(.white)
+                        .lineLimit(1)
 
-                    ZStack {
-                        Circle()
-                            .fill(.white)
-                            .frame(width: 30, height: 30)
-                        Image(systemName: "chevron.right")
-                            .font(.system(size: 12, weight: .bold))
-                            .foregroundStyle(Color(white: 0.12))
+                    Text(String(vehicle.vehicle.year))
+                        .font(.system(size: 13))
+                        .foregroundStyle(.white.opacity(0.65))
+
+                    HStack(spacing: 20) {
+                        if let hp = vehicle.appSpecs.horsepower {
+                            statView(value: "\(hp) HP", label: "POWER")
+                        }
+                        if let acc = vehicle.appSpecs.acceleration {
+                            statView(value: acc, label: "0-100 KM/H")
+                        }
                     }
+                    .padding(.top, 2)
+
+                    HStack(spacing: 10) {
+                        Text("View details")
+                            .font(.system(size: 14, weight: .semibold))
+                            .foregroundStyle(.white)
+
+                        ZStack {
+                            Circle()
+                                .fill(.white)
+                                .frame(width: 30, height: 30)
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 12, weight: .bold))
+                                .foregroundStyle(Color(white: 0.12))
+                        }
+                    }
+                    .padding(.top, 6)
                 }
-                .padding(.top, 6)
+                .padding(16)
             }
-            .padding(16)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(white: 0.12))
     }
 
