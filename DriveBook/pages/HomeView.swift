@@ -1,36 +1,50 @@
-//
-//  HomeView.swift
-//  DriveBook
-//
-//  Created by Thiago Castro on 05/06/26.
-//
-
-
 import SwiftUI
 
 struct HomeView: View {
-    
+    @State private var viewModel = HomeViewModel()
+    @State private var searchText = ""
 
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
 
-            VStack(alignment: .leading, spacing: 0) {
-                HomeHeaderView()
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 0) {
+                    HomeHeaderView()
 
-                HomeTitleView()
+                    HomeTitleView()
 
-                HomeSearchInputView()
+                    HomeSearchInputView(searchText: $searchText)
 
-                Spacer()
+                    if !viewModel.featured.isEmpty {
+                        FeaturedCarouselView(vehicles: viewModel.featured)
+                            .padding(.top, 28)
+                    }
+
+                    if !viewModel.popular.isEmpty {
+                        PopularSectionView(vehicles: viewModel.popular)
+                            .padding(.top, 28)
+                    }
+
+                    if !viewModel.brands.isEmpty {
+                        BrandsSectionView(brands: viewModel.brands)
+                            .padding(.top, 28)
+                    }
+
+                    Spacer(minLength: 32)
+                }
+                .padding(.horizontal, 16)
             }
-            .padding(.horizontal, 16)
+
+            if viewModel.isLoading {
+                ProgressView()
+                    .tint(.white)
+            }
+        }
+        .task {
+            await viewModel.loadAll()
         }
     }
-}
-
-#Preview {
-    HomeView()
 }
 
 #Preview {
