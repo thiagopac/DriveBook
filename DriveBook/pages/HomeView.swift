@@ -8,32 +8,35 @@ struct HomeView: View {
         ZStack {
             Color.black.ignoresSafeArea()
 
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 0) {
-                    HomeHeaderView()
+            VStack(spacing: 0) {
+                HomeHeaderView()
+                    .padding(.horizontal, 16)
 
-                    HomeTitleView()
+                ScrollView(showsIndicators: false) {
+                    VStack(alignment: .leading, spacing: 0) {
+                        HomeTitleView()
 
-                    HomeSearchInputView(searchText: $searchText)
+                        HomeSearchInputView(searchText: $searchText)
 
-                    if !viewModel.featured.isEmpty {
-                        FeaturedCarouselView(vehicles: viewModel.featured)
-                            .padding(.top, 28)
+                        if !viewModel.featured.isEmpty {
+                            FeaturedCarouselView(vehicles: viewModel.featured)
+                                .padding(.top, 28)
+                        }
+
+                        if !viewModel.popular.isEmpty {
+                            PopularSectionView(vehicles: viewModel.popular)
+                                .padding(.top, 28)
+                        }
+
+                        if !viewModel.brands.isEmpty {
+                            BrandsSectionView(brands: viewModel.brands)
+                                .padding(.top, 28)
+                        }
+
+                        Spacer(minLength: 32)
                     }
-
-                    if !viewModel.popular.isEmpty {
-                        PopularSectionView(vehicles: viewModel.popular)
-                            .padding(.top, 28)
-                    }
-
-                    if !viewModel.brands.isEmpty {
-                        BrandsSectionView(brands: viewModel.brands)
-                            .padding(.top, 28)
-                    }
-
-                    Spacer(minLength: 32)
+                    .padding(.horizontal, 16)
                 }
-                .padding(.horizontal, 16)
             }
 
             if viewModel.isLoading {

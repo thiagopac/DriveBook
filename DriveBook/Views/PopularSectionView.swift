@@ -30,59 +30,65 @@ struct PopularCarCard: View {
     let vehicle: VehicleListing
     @State private var isFavorite = false
 
+    private let cardBg = Color(white: 0.11)
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            ZStack(alignment: .topTrailing) {
+        ZStack(alignment: .topTrailing) {
+            ZStack(alignment: .bottom) {
                 if let raw = vehicle.retailListing.primaryImage, let url = URL(string: raw) {
                     AsyncImage(url: url) { img in
                         img.resizable().aspectRatio(contentMode: .fill)
                     } placeholder: {
-                        Color(white: 0.18)
+                        cardBg
                     }
-                    .frame(width: 155, height: 110)
+                    .frame(width: 155, height: 210)
                     .clipped()
                 } else {
-                    Color(white: 0.18)
-                        .frame(width: 155, height: 110)
+                    cardBg.frame(width: 155, height: 210)
                 }
 
-                Button {
-                    isFavorite.toggle()
-                } label: {
-                    Image(systemName: isFavorite ? "heart.fill" : "heart")
-                        .font(.system(size: 14))
-                        .foregroundStyle(isFavorite ? .red : .white)
-                        .padding(7)
-                        .background(Color.black.opacity(0.45))
-                        .clipShape(Circle())
-                }
-                .padding(8)
-            }
-            .clipShape(UnevenRoundedRectangle(topLeadingRadius: 12, bottomLeadingRadius: 0, bottomTrailingRadius: 0, topTrailingRadius: 12))
+                LinearGradient(
+                    colors: [.clear, cardBg.opacity(0.6), cardBg],
+                    startPoint: UnitPoint(x: 0.5, y: 0.35),
+                    endPoint: .bottom
+                )
 
-            VStack(alignment: .leading, spacing: 2) {
-                Text(vehicle.vehicle.make)
-                    .font(.system(size: 11))
-                    .foregroundStyle(.white.opacity(0.55))
-                Text(vehicle.vehicle.displayModelName)
-                    .font(.system(size: 13, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .lineLimit(1)
-                Text(String(vehicle.vehicle.year))
-                    .font(.system(size: 11))
-                    .foregroundStyle(.white.opacity(0.55))
-                if let hp = vehicle.appSpecs.horsepower {
-                    Text("\(hp) HP")
-                        .font(.system(size: 13, weight: .bold))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(vehicle.vehicle.make)
+                        .font(.system(size: 11))
+                        .foregroundStyle(.white.opacity(0.6))
+                    Text(vehicle.vehicle.displayModelName)
+                        .font(.system(size: 13, weight: .semibold))
                         .foregroundStyle(.white)
-                        .padding(.top, 2)
+                        .lineLimit(1)
+                    Text(String(vehicle.vehicle.year))
+                        .font(.system(size: 11))
+                        .foregroundStyle(.white.opacity(0.6))
+                    if let hp = vehicle.appSpecs.horsepower {
+                        Text("\(hp) HP")
+                            .font(.system(size: 13, weight: .bold))
+                            .foregroundStyle(.white)
+                            .padding(.top, 2)
+                    }
                 }
+                .padding(.horizontal, 10)
+                .padding(.bottom, 12)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.horizontal, 10)
-            .padding(.vertical, 10)
+
+            Button {
+                isFavorite.toggle()
+            } label: {
+                Image(systemName: isFavorite ? "heart.fill" : "heart")
+                    .font(.system(size: 14))
+                    .foregroundStyle(isFavorite ? .red : .white)
+                    .padding(7)
+                    .background(Color.black.opacity(0.45))
+                    .clipShape(Circle())
+            }
+            .padding(8)
         }
         .frame(width: 155)
-        .background(Color(white: 0.11))
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
