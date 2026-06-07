@@ -78,19 +78,21 @@ struct FeaturedCarCard: View {
                 }
                 .padding(.top, 2)
 
-                HStack(spacing: 6) {
+                HStack(spacing: 10) {
                     Text("View details")
-                        .font(.system(size: 13, weight: .semibold))
+                        .font(.system(size: 14, weight: .semibold))
                         .foregroundStyle(.white)
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: 11, weight: .semibold))
-                        .foregroundStyle(.white)
+
+                    ZStack {
+                        Circle()
+                            .fill(.white)
+                            .frame(width: 30, height: 30)
+                        Image(systemName: "chevron.right")
+                            .font(.system(size: 12, weight: .bold))
+                            .foregroundStyle(Color(white: 0.12))
+                    }
                 }
-                .padding(.horizontal, 14)
-                .padding(.vertical, 7)
-                .background(Color.white.opacity(0.18))
-                .clipShape(Capsule())
-                .padding(.top, 6)
+                .padding(.top, 8)
             }
             .padding(16)
         }
