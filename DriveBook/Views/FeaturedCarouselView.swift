@@ -44,6 +44,7 @@ struct FeaturedCarCard: View {
                 } placeholder: {
                     Color(white: 0.15)
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .clipped()
             } else {
                 Color(white: 0.15)
@@ -63,6 +64,7 @@ struct FeaturedCarCard: View {
                 Text(vehicle.vehicle.displayModelName)
                     .font(.system(size: 22, weight: .bold))
                     .foregroundStyle(.white)
+                    .lineLimit(1)
 
                 Text(String(vehicle.vehicle.year))
                     .font(.system(size: 13))
@@ -92,10 +94,11 @@ struct FeaturedCarCard: View {
                             .foregroundStyle(Color(white: 0.12))
                     }
                 }
-                .padding(.top, 8)
+                .padding(.top, 6)
             }
             .padding(16)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(white: 0.12))
     }
 
