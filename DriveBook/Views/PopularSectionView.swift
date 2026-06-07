@@ -33,62 +33,67 @@ struct PopularCarCard: View {
     private let cardBg = Color(white: 0.11)
 
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            ZStack(alignment: .bottom) {
-                if let raw = vehicle.retailListing.primaryImage, let url = URL(string: raw) {
-                    AsyncImage(url: url) { img in
-                        img.resizable().aspectRatio(contentMode: .fill)
-                    } placeholder: {
-                        cardBg
+        VStack(alignment: .leading, spacing: 0) {
+            ZStack(alignment: .topTrailing) {
+                ZStack(alignment: .bottom) {
+                    if let raw = vehicle.retailListing.primaryImage, let url = URL(string: raw) {
+                        AsyncImage(url: url) { img in
+                            img.resizable().aspectRatio(contentMode: .fill)
+                        } placeholder: {
+                            Color(white: 0.18)
+                        }
+                        .frame(width: 155, height: 115)
+                        .clipped()
+                    } else {
+                        Color(white: 0.18).frame(width: 155, height: 115)
                     }
-                    .frame(width: 155, height: 210)
-                    .clipped()
-                } else {
-                    cardBg.frame(width: 155, height: 210)
+
+                    LinearGradient(
+                        colors: [.clear, cardBg],
+                        startPoint: UnitPoint(x: 0.5, y: 0.5),
+                        endPoint: .bottom
+                    )
+                    .frame(height: 115)
                 }
 
-                LinearGradient(
-                    colors: [.clear, cardBg.opacity(0.6), cardBg],
-                    startPoint: UnitPoint(x: 0.5, y: 0.35),
-                    endPoint: .bottom
-                )
+                Button {
+                    isFavorite.toggle()
+                } label: {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .font(.system(size: 14))
+                        .foregroundStyle(isFavorite ? .red : .white)
+                        .padding(7)
+                        .background(Color.black.opacity(0.45))
+                        .clipShape(Circle())
+                }
+                .padding(8)
+            }
+            .clipShape(UnevenRoundedRectangle(topLeadingRadius: 12, bottomLeadingRadius: 0, bottomTrailingRadius: 0, topTrailingRadius: 12))
 
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(vehicle.vehicle.make)
-                        .font(.system(size: 11))
-                        .foregroundStyle(.white.opacity(0.6))
-                    Text(vehicle.vehicle.displayModelName)
-                        .font(.system(size: 13, weight: .semibold))
+            VStack(alignment: .leading, spacing: 2) {
+                Text(vehicle.vehicle.make)
+                    .font(.system(size: 11))
+                    .foregroundStyle(.white.opacity(0.55))
+                Text(vehicle.vehicle.displayModelName)
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(.white)
+                    .lineLimit(1)
+                Text(String(vehicle.vehicle.year))
+                    .font(.system(size: 11))
+                    .foregroundStyle(.white.opacity(0.55))
+                if let hp = vehicle.appSpecs.horsepower {
+                    Text("\(hp) HP")
+                        .font(.system(size: 13, weight: .bold))
                         .foregroundStyle(.white)
-                        .lineLimit(1)
-                    Text(String(vehicle.vehicle.year))
-                        .font(.system(size: 11))
-                        .foregroundStyle(.white.opacity(0.6))
-                    if let hp = vehicle.appSpecs.horsepower {
-                        Text("\(hp) HP")
-                            .font(.system(size: 13, weight: .bold))
-                            .foregroundStyle(.white)
-                            .padding(.top, 2)
-                    }
+                        .padding(.top, 2)
                 }
-                .padding(.horizontal, 10)
-                .padding(.bottom, 12)
-                .frame(maxWidth: .infinity, alignment: .leading)
             }
-
-            Button {
-                isFavorite.toggle()
-            } label: {
-                Image(systemName: isFavorite ? "heart.fill" : "heart")
-                    .font(.system(size: 14))
-                    .foregroundStyle(isFavorite ? .red : .white)
-                    .padding(7)
-                    .background(Color.black.opacity(0.45))
-                    .clipShape(Circle())
-            }
-            .padding(8)
+            .padding(.horizontal, 10)
+            .padding(.top, 8)
+            .padding(.bottom, 12)
         }
         .frame(width: 155)
+        .background(cardBg)
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
