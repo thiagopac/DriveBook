@@ -12,8 +12,8 @@ struct VehicleDetailView: View {
     private let accent = Color(red: 0.64, green: 0.58, blue: 1.0)
     private let purple = Color(red: 0.38, green: 0.32, blue: 0.82)
     private let boxBg = Color(white: 0.95)
-    private let photoHeight: CGFloat = 400
-    private let cardOffset: CGFloat = 270
+    private let photoHeight: CGFloat = 350
+    private let cardOffset: CGFloat = 300
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -77,7 +77,7 @@ struct VehicleDetailView: View {
                 .frame(height: cardOffset)
                 .allowsHitTesting(false)
             infoCard
-            Color.white.frame(height: 600)
+            Color.white.frame(height: 100)
         }
     }
 
@@ -182,16 +182,17 @@ struct VehicleDetailView: View {
     @ViewBuilder
     private var priceBox: some View {
         if let msrp = vehicle.vehicle.baseMsrp ?? vehicle.retailListing.price {
-            VStack(alignment: .center, spacing: 3) {
+            VStack(alignment: .center, spacing: 10) {
                 Text(priceString(msrp))
                     .font(.system(size: 16, weight: .bold))
                     .foregroundStyle(accent)
                 Text("Estimated Price")
                     .font(.system(size: 10))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(accent)
+                
             }
             .padding(.horizontal, 14)
-            .padding(.vertical, 12)
+            .padding(.vertical, 8)
             .background(boxBg)
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
         }
