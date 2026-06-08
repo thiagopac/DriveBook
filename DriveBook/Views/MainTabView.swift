@@ -21,7 +21,7 @@ struct MainTabView: View {
                     Color.black.ignoresSafeArea()
                     Text("Garage").foregroundStyle(.white)
                 }
-            }
+                }
             .tabItem { Label("Garage", systemImage: "car.fill") }
 
             NavigationStack {
