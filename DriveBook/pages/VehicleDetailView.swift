@@ -38,18 +38,16 @@ struct VehicleDetailView: View {
                 .padding(.horizontal, 16)
                 .padding(.bottom, 28)
         }
-        .navigationBarHidden(true)
-        .task {
-            await loadPhotos()
-        }
+        .toolbar(.hidden, for: .navigationBar)
+        .task { await loadPhotos() }
     }
 
     private var photoCarousel: some View {
         GeometryReader { geo in
             ZStack(alignment: .bottom) {
                 TabView(selection: $currentPhoto) {
-                    ForEach(Array(displayPhotos.enumerated()), id: \.offset) { i, url in
-                        AsyncImage(url: URL(string: url)) { img in
+                    ForEach(Array(displayPhotos.enumerated()), id: \.offset) { i, urlStr in
+                        AsyncImage(url: URL(string: urlStr)) { img in
                             img.resizable().aspectRatio(contentMode: .fill)
                         } placeholder: {
                             Color(white: 0.12)
@@ -76,35 +74,36 @@ struct VehicleDetailView: View {
     }
 
     private var displayPhotos: [String] {
-        let list = photos.isEmpty
-            ? (vehicle.retailListing.primaryImage.map { [$0] } ?? [])
-            : Array(photos.prefix(8))
-        return list
+        if !photos.isEmpty { return Array(photos.prefix(8)) }
+        if let img = vehicle.retailListing.primaryImage { return [img] }
+        return []
     }
 
     private var navOverlay: some View {
-        HStack {
-            Button { dismiss() } label: {
-                Image(systemName: "chevron.left")
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .frame(width: 36, height: 36)
-                    .background(Color.black.opacity(0.45))
-                    .clipShape(Circle())
+        VStack {
+            HStack {
+                Button { dismiss() } label: {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(width: 36, height: 36)
+                        .background(Color.black.opacity(0.45))
+                        .clipShape(Circle())
+                }
+                Spacer()
+                Button { isFavorite.toggle() } label: {
+                    Image(systemName: "heart.fill")
+                        .font(.system(size: 16))
+                        .foregroundStyle(isFavorite ? .red : .white)
+                        .frame(width: 36, height: 36)
+                        .background(Color.black.opacity(0.45))
+                        .clipShape(Circle())
+                }
             }
+            .padding(.horizontal, 16)
+            .padding(.top, 54)
             Spacer()
-            Button { isFavorite.toggle() } label: {
-                Image(systemName: isFavorite ? "heart.fill" : "heart.fill")
-                    .font(.system(size: 16))
-                    .foregroundStyle(.red)
-                    .frame(width: 36, height: 36)
-                    .background(Color.black.opacity(0.45))
-                    .clipShape(Circle())
-            }
         }
-        .padding(.horizontal, 16)
-        .frame(maxHeight: .infinity, alignment: .top)
-        .padding(.top, 54)
         .ignoresSafeArea(edges: .top)
         .allowsHitTesting(true)
     }
@@ -140,7 +139,7 @@ struct VehicleDetailView: View {
                     .padding(.top, 20)
             }
 
-            Spacer(minLength: 100)
+            Spacer(minLength: 110)
         }
     }
 
@@ -162,7 +161,7 @@ struct VehicleDetailView: View {
             Spacer()
             if let msrp = vehicle.vehicle.baseMsrp ?? vehicle.retailListing.price {
                 VStack(alignment: .trailing, spacing: 2) {
-                    Text(msrp, format: .currency(code: "USD").precision(.fractionLength(0)))
+                    Text(formatPrice(msrp))
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundStyle(accent)
                     Text("Estimated Price")
@@ -175,10 +174,18 @@ struct VehicleDetailView: View {
 
     private var statsRow: some View {
         HStack(spacing: 0) {
-            statCell(icon: "bolt.fill", value: vehicle.appSpecs.horsepower.map { "\($0) HP" } ?? "—", label: "Power")
-            statCell(icon: "stopwatch", value: vehicle.appSpecs.acceleration ?? "—", label: "0-100 km/h")
-            statCell(icon: "gauge.high", value: vehicle.appSpecs.topSpeed ?? "—", label: "Top Speed")
-            statCell(icon: "fuelpump.fill", value: vehicle.appSpecs.fuelEconomy ?? "—", label: "Fuel Economy")
+            statCell(icon: "bolt.fill",
+                     value: vehicle.appSpecs.horsepower.map { "\($0) HP" } ?? "—",
+                     label: "Power")
+            statCell(icon: "stopwatch",
+                     value: vehicle.appSpecs.acceleration ?? "—",
+                     label: "0-100 km/h")
+            statCell(icon: "gauge.high",
+                     value: vehicle.appSpecs.topSpeed ?? "—",
+                     label: "Top Speed")
+            statCell(icon: "fuelpump.fill",
+                     value: vehicle.appSpecs.fuelEconomy ?? "—",
+                     label: "Fuel Economy")
         }
     }
 
@@ -188,8 +195,9 @@ struct VehicleDetailView: View {
                 .font(.system(size: 18))
                 .foregroundStyle(accent)
             Text(value)
-                .font(.system(size: 14, weight: .bold))
+                .font(.system(size: 13, weight: .bold))
                 .foregroundStyle(.black)
+                .multilineTextAlignment(.center)
             Text(label)
                 .font(.system(size: 10))
                 .foregroundStyle(.secondary)
@@ -205,8 +213,8 @@ struct VehicleDetailView: View {
                 .foregroundStyle(.black)
 
             if let desc = vehicle.appSpecs.description {
-                let trimmed = descriptionExpanded ? desc : String(desc.prefix(120))
-                Text(trimmed + (descriptionExpanded ? "" : "..."))
+                let shown = descriptionExpanded ? desc : String(desc.prefix(120))
+                Text(shown + (descriptionExpanded ? "" : "..."))
                     .font(.system(size: 14))
                     .foregroundStyle(Color(white: 0.25))
                     .lineSpacing(3)
@@ -216,12 +224,11 @@ struct VehicleDetailView: View {
                 } label: {
                     HStack(spacing: 4) {
                         Text(descriptionExpanded ? "Show less" : "Show more")
-                            .font(.system(size: 13, weight: .semibold))
-                            .foregroundStyle(accent)
                         Image(systemName: descriptionExpanded ? "chevron.up" : "chevron.down")
                             .font(.system(size: 10, weight: .semibold))
-                            .foregroundStyle(accent)
                     }
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(accent)
                 }
             }
         }
@@ -249,8 +256,7 @@ struct VehicleDetailView: View {
     }
 
     private var addToGarageButton: some View {
-        Button {
-        } label: {
+        Button {} label: {
             HStack(spacing: 8) {
                 Image(systemName: "car.fill")
                 Text("Add to Garage")
@@ -264,9 +270,16 @@ struct VehicleDetailView: View {
         }
     }
 
+    private func formatPrice(_ amount: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = "USD"
+        formatter.maximumFractionDigits = 0
+        return formatter.string(from: NSNumber(value: amount)) ?? "$\(amount)"
+    }
+
     private func loadPhotos() async {
         guard let list = try? await APIService.fetchVehiclePhotos(vin: vehicle.vin) else { return }
         photos = list
     }
 }
-
