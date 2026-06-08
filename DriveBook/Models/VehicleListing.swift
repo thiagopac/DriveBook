@@ -5,6 +5,8 @@ struct VehicleInfo: Codable {
     let model: String
     let trim: String?
     let year: Int
+    let baseMsrp: Int?
+    let baseInvoice: Int?
     let bodyStyle: String?
     let drivetrain: String?
     let engine: String?
