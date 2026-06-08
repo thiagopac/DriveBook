@@ -17,26 +17,17 @@ struct MainTabView: View {
             .tabItem { Label("Search", systemImage: "magnifyingglass") }
 
             NavigationStack {
-                ZStack {
-                    Color.black.ignoresSafeArea()
-                    Text("Garage").foregroundStyle(.white)
-                }
-                }
+                GarageView()
+            }
             .tabItem { Label("Garage", systemImage: "car.fill") }
 
             NavigationStack {
-                ZStack {
-                    Color.black.ignoresSafeArea()
-                    Text("Favorites").foregroundStyle(.white)
-                }
+                FavoritesView()
             }
             .tabItem { Label("Favorites", systemImage: "heart.fill") }
 
             NavigationStack {
-                ZStack {
-                    Color.black.ignoresSafeArea()
-                    Text("Profile").foregroundStyle(.white)
-                }
+                ProfileView()
             }
             .tabItem { Label("Profile", systemImage: "person.fill") }
         }
