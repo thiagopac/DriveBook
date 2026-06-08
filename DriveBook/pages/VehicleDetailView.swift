@@ -1,4 +1,5 @@
 import SwiftUI
+import Foundation
 
 struct VehicleDetailView: View {
     let vehicle: VehicleListing
@@ -17,23 +18,10 @@ struct VehicleDetailView: View {
 
             VStack(spacing: 0) {
                 photoCarousel
-
-                ScrollView(showsIndicators: false) {
-                    VStack(alignment: .leading, spacing: 0) {
-                        infoCard
-                    }
-                }
-                .background(Color.white)
-                .clipShape(UnevenRoundedRectangle(
-                    topLeadingRadius: 26,
-                    bottomLeadingRadius: 0,
-                    bottomTrailingRadius: 0,
-                    topTrailingRadius: 26
-                ))
+                infoScrollView
             }
 
             navOverlay
-
             addToGarageButton
                 .padding(.horizontal, 16)
                 .padding(.bottom, 28)
@@ -73,6 +61,23 @@ struct VehicleDetailView: View {
         .frame(height: 320)
     }
 
+    private var infoScrollView: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: 0) {
+                headerSection.padding(.horizontal, 20).padding(.top, 22).padding(.bottom, 8)
+                subtitleRow.padding(.horizontal, 20).padding(.bottom, 20)
+                Divider().padding(.horizontal, 20)
+                statsRow.padding(.horizontal, 12).padding(.vertical, 20)
+                Divider().padding(.horizontal, 20)
+                aboutSection.padding(.horizontal, 20).padding(.top, 20)
+                keyFeaturesSection.padding(.horizontal, 20).padding(.top, 20)
+                Spacer(minLength: 110)
+            }
+        }
+        .background(Color.white)
+        .clipShape(RoundedRectangle(cornerRadius: 26, style: .continuous))
+    }
+
     private var displayPhotos: [String] {
         if !photos.isEmpty { return Array(photos.prefix(8)) }
         if let img = vehicle.retailListing.primaryImage { return [img] }
@@ -105,42 +110,6 @@ struct VehicleDetailView: View {
             Spacer()
         }
         .ignoresSafeArea(edges: .top)
-        .allowsHitTesting(true)
-    }
-
-    private var infoCard: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            headerSection
-                .padding(.horizontal, 20)
-                .padding(.top, 22)
-                .padding(.bottom, 8)
-
-            Text("\(vehicle.appSpecs.category ?? "") • \(vehicle.appSpecs.drivetrain ?? vehicle.vehicle.drivetrain ?? "")")
-                .font(.system(size: 13))
-                .foregroundStyle(.secondary)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 20)
-
-            Divider().padding(.horizontal, 20)
-
-            statsRow
-                .padding(.horizontal, 12)
-                .padding(.vertical, 20)
-
-            Divider().padding(.horizontal, 20)
-
-            aboutSection
-                .padding(.horizontal, 20)
-                .padding(.top, 20)
-
-            if let features = vehicle.appSpecs.keyFeatures, !features.isEmpty {
-                keyFeaturesSection(features)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-            }
-
-            Spacer(minLength: 110)
-        }
     }
 
     private var headerSection: some View {
@@ -159,17 +128,30 @@ struct VehicleDetailView: View {
                 }
             }
             Spacer()
-            if let msrp = vehicle.vehicle.baseMsrp ?? vehicle.retailListing.price {
-                VStack(alignment: .trailing, spacing: 2) {
-                    Text(formatPrice(msrp))
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundStyle(accent)
-                    Text("Estimated Price")
-                        .font(.system(size: 11))
-                        .foregroundStyle(.secondary)
-                }
+            priceView
+        }
+    }
+
+    @ViewBuilder
+    private var priceView: some View {
+        if let msrp = vehicle.vehicle.baseMsrp ?? vehicle.retailListing.price {
+            VStack(alignment: .trailing, spacing: 2) {
+                Text(priceString(msrp))
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(accent)
+                Text("Estimated Price")
+                    .font(.system(size: 11))
+                    .foregroundStyle(.secondary)
             }
         }
+    }
+
+    private var subtitleRow: some View {
+        let cat = vehicle.appSpecs.category ?? ""
+        let drive = vehicle.appSpecs.drivetrain ?? vehicle.vehicle.drivetrain ?? ""
+        return Text("\(cat) • \(drive)")
+            .font(.system(size: 13))
+            .foregroundStyle(.secondary)
     }
 
     private var statsRow: some View {
@@ -191,34 +173,21 @@ struct VehicleDetailView: View {
 
     private func statCell(icon: String, value: String, label: String) -> some View {
         VStack(spacing: 6) {
-            Image(systemName: icon)
-                .font(.system(size: 18))
-                .foregroundStyle(accent)
-            Text(value)
-                .font(.system(size: 13, weight: .bold))
-                .foregroundStyle(.black)
-                .multilineTextAlignment(.center)
-            Text(label)
-                .font(.system(size: 10))
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
+            Image(systemName: icon).font(.system(size: 18)).foregroundStyle(accent)
+            Text(value).font(.system(size: 13, weight: .bold)).foregroundStyle(.black).multilineTextAlignment(.center)
+            Text(label).font(.system(size: 10)).foregroundStyle(.secondary).multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
     }
 
     private var aboutSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("About")
-                .font(.system(size: 18, weight: .bold))
-                .foregroundStyle(.black)
-
+            Text("About").font(.system(size: 18, weight: .bold)).foregroundStyle(.black)
             if let desc = vehicle.appSpecs.description {
-                let shown = descriptionExpanded ? desc : String(desc.prefix(120))
-                Text(shown + (descriptionExpanded ? "" : "..."))
+                Text(descriptionExpanded ? desc : (String(desc.prefix(120)) + "..."))
                     .font(.system(size: 14))
                     .foregroundStyle(Color(white: 0.25))
                     .lineSpacing(3)
-
                 Button {
                     descriptionExpanded.toggle()
                 } label: {
@@ -234,21 +203,21 @@ struct VehicleDetailView: View {
         }
     }
 
-    private func keyFeaturesSection(_ features: [String]) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Key Features")
-                .font(.system(size: 18, weight: .bold))
-                .foregroundStyle(.black)
-
-            VStack(alignment: .leading, spacing: 10) {
-                ForEach(features, id: \.self) { feature in
-                    HStack(spacing: 10) {
-                        Image(systemName: "checkmark.circle.fill")
-                            .font(.system(size: 18))
-                            .foregroundStyle(purple)
-                        Text(feature)
-                            .font(.system(size: 14))
-                            .foregroundStyle(Color(white: 0.15))
+    @ViewBuilder
+    private var keyFeaturesSection: some View {
+        if let features = vehicle.appSpecs.keyFeatures, !features.isEmpty {
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Key Features").font(.system(size: 18, weight: .bold)).foregroundStyle(.black)
+                VStack(alignment: .leading, spacing: 10) {
+                    ForEach(features, id: \.self) { feature in
+                        HStack(spacing: 10) {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 18))
+                                .foregroundStyle(purple)
+                            Text(feature)
+                                .font(.system(size: 14))
+                                .foregroundStyle(Color(white: 0.15))
+                        }
                     }
                 }
             }
@@ -270,12 +239,12 @@ struct VehicleDetailView: View {
         }
     }
 
-    private func formatPrice(_ amount: Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: amount)) ?? "$\(amount)"
+    private func priceString(_ amount: Int) -> String {
+        let fmt = NumberFormatter()
+        fmt.numberStyle = .currency
+        fmt.currencyCode = "USD"
+        fmt.maximumFractionDigits = 0
+        return fmt.string(from: NSNumber(value: amount)) ?? "$\(amount)"
     }
 
     private func loadPhotos() async {
