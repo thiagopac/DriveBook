@@ -26,47 +26,62 @@ struct VehicleDetailView: View {
         .task { await loadPhotos() }
     }
 
+    // MARK: - Scroll layer
+
     private var scrollContent: some View {
         ScrollView(showsIndicators: false) {
             ZStack(alignment: .top) {
-                ZStack(alignment: .bottom) {
-                    photoCarousel
-                        .frame(maxWidth: .infinity)
-                        .frame(height: photoHeight)
-                    pagingDots
-                        .padding(.bottom, photoHeight - cardOffset + 16)
-                }
-                .frame(height: photoHeight)
-
-                VStack(spacing: 0) {
-                    Color.clear
-                        .frame(height: cardOffset)
-                        .allowsHitTesting(false)
-                    infoCard
-                    Color.white.frame(height: 600)
-                }
+                photoLayer
+                pagingDots.padding(.top, cardOffset - 30).allowsHitTesting(false)
+                cardLayer
             }
             .frame(maxWidth: .infinity)
         }
+        .coordinateSpace(name: "detailScroll")
         .ignoresSafeArea(edges: .top)
     }
 
-    private var photoCarousel: some View {
-        TabView(selection: $currentPhoto) {
-            ForEach(Array(displayPhotos.enumerated()), id: \.offset) { i, urlStr in
-                AsyncImage(url: URL(string: urlStr)) { img in
-                    img.resizable().scaledToFill()
-                } placeholder: {
-                    Color(white: 0.12)
+    // MARK: - Photo with parallax
+
+    private var photoLayer: some View {
+        GeometryReader { geo in
+            let scrollY = geo.frame(in: .named("detailScroll")).minY
+            let isRubberBand = scrollY > 0
+            let frameH = isRubberBand ? photoHeight + scrollY : photoHeight
+            let offsetY = isRubberBand ? -scrollY : -scrollY * 0.7
+
+            TabView(selection: $currentPhoto) {
+                ForEach(Array(displayPhotos.enumerated()), id: \.offset) { i, urlStr in
+                    AsyncImage(url: URL(string: urlStr)) { img in
+                        img.resizable().scaledToFill()
+                    } placeholder: {
+                        Color(white: 0.12)
+                    }
+                    .frame(width: geo.size.width, height: max(frameH, photoHeight))
+                    .clipped()
+                    .tag(i)
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: photoHeight)
-                .clipped()
-                .tag(i)
             }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .frame(width: geo.size.width, height: max(frameH, photoHeight))
+            .offset(y: offsetY)
         }
-        .tabViewStyle(.page(indexDisplayMode: .never))
+        .frame(height: photoHeight)
     }
+
+    // MARK: - Card that slides over photo
+
+    private var cardLayer: some View {
+        VStack(spacing: 0) {
+            Color.clear
+                .frame(height: cardOffset)
+                .allowsHitTesting(false)
+            infoCard
+            Color.white.frame(height: 600)
+        }
+    }
+
+    // MARK: - Paging dots
 
     private var pagingDots: some View {
         HStack(spacing: 5) {
@@ -78,6 +93,8 @@ struct VehicleDetailView: View {
             }
         }
     }
+
+    // MARK: - Nav buttons (fixed over scroll)
 
     private var navButtons: some View {
         HStack {
@@ -102,6 +119,8 @@ struct VehicleDetailView: View {
         .padding(.horizontal, 16)
         .padding(.top, 68)
     }
+
+    // MARK: - White info card
 
     private var infoCard: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -137,6 +156,8 @@ struct VehicleDetailView: View {
         .background(Color.white)
         .clipShape(TopRoundedShape(radius: 26))
     }
+
+    // MARK: - Card content
 
     private var headerSection: some View {
         HStack(alignment: .center) {
@@ -235,9 +256,7 @@ struct VehicleDetailView: View {
                     .font(.system(size: 14))
                     .foregroundStyle(Color(white: 0.25))
                     .lineSpacing(3)
-                Button {
-                    descriptionExpanded.toggle()
-                } label: {
+                Button { descriptionExpanded.toggle() } label: {
                     HStack(spacing: 4) {
                         Text(descriptionExpanded ? "Show less" : "Show more")
                         Image(systemName: descriptionExpanded ? "chevron.up" : "chevron.down")
@@ -288,6 +307,8 @@ struct VehicleDetailView: View {
         }
     }
 
+    // MARK: - Helpers
+
     private var displayPhotos: [String] {
         if !photos.isEmpty { return Array(photos.prefix(8)) }
         if let img = vehicle.retailListing.primaryImage { return [img] }
@@ -307,6 +328,8 @@ struct VehicleDetailView: View {
         photos = list
     }
 }
+
+// MARK: - Top-only rounded shape
 
 private struct TopRoundedShape: Shape {
     let radius: CGFloat
