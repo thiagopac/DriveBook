@@ -42,15 +42,45 @@ struct AppSpecs: Codable {
     let keyFeatures: [String]?
 }
 
-struct VehicleListing: Codable, Identifiable {
+struct VehicleHistory: Codable {
+    let accidentCount: Int?
+    let accidents: Bool?
+    let oneOwner: Bool?
+    let ownerCount: Int?
+    let personalUse: Bool?
+    let usageType: String?
+}
+
+struct VehicleListing: Codable, Identifiable, Hashable {
     let vin: String
     let vehicle: VehicleInfo
     let retailListing: RetailListing
     let appSpecs: AppSpecs
+    let history: VehicleHistory?
 
     var id: String { vin }
+
+    static func == (lhs: VehicleListing, rhs: VehicleListing) -> Bool { lhs.vin == rhs.vin }
+    func hash(into hasher: inout Hasher) { hasher.combine(vin) }
 }
 
 struct VehicleListResponse: Codable {
     let data: [VehicleListing]
+}
+
+struct BrowseListResponse: Codable {
+    let total: Int?
+    let data: [VehicleListing]
+}
+
+struct VehicleDetailResponse: Codable {
+    let data: VehicleListing
+}
+
+struct PhotosData: Codable {
+    let retail: [String]
+}
+
+struct PhotosResponse: Codable {
+    let data: PhotosData
 }

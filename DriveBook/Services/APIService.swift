@@ -25,4 +25,14 @@ enum APIService {
         let response: BrandListResponse = try await fetch("home/brands.json")
         return response.data
     }
+
+    static func fetchBrowse(category: String) async throws -> (total: Int, vehicles: [VehicleListing]) {
+        let response: BrowseListResponse = try await fetch("browse/\(category).json")
+        return (response.total ?? response.data.count, response.data)
+    }
+
+    static func fetchVehiclePhotos(vin: String) async throws -> [String] {
+        let response: PhotosResponse = try await fetch("vehicles/\(vin)/photos.json")
+        return response.data.retail
+    }
 }
