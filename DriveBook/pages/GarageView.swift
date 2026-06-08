@@ -14,9 +14,9 @@ struct GarageView: View {
                 header
 
                 if isLoading {
-                    Spacer()
-                    ProgressView().tint(.white)
-                    Spacer()
+                    ScrollView(showsIndicators: false) {
+                        GarageSkeleton()
+                    }
                 } else {
                     ScrollView(showsIndicators: false) {
                         VStack(spacing: 14) {

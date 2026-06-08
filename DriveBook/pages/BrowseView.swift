@@ -21,9 +21,9 @@ struct BrowseView: View {
                     .background(Color.white.opacity(0.1))
 
                 if viewModel.isLoading {
-                    Spacer()
-                    ProgressView().tint(.white)
-                    Spacer()
+                    ScrollView(showsIndicators: false) {
+                        BrowseSkeleton()
+                    }
                 } else {
                     ScrollView(showsIndicators: false) {
                         LazyVStack(spacing: 0) {

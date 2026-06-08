@@ -43,19 +43,21 @@ struct HomeView: View {
 
                     HomeSearchInputView(searchText: $searchText)
 
-                    if !viewModel.featured.isEmpty {
-                        FeaturedCarouselView(vehicles: viewModel.featured)
-                            .padding(.top, 28)
-                    }
-
-                    if !viewModel.popular.isEmpty {
-                        PopularSectionView(vehicles: viewModel.popular)
-                            .padding(.top, 28)
-                    }
-
-                    if !viewModel.brands.isEmpty {
-                        BrandsSectionView(brands: viewModel.brands)
-                            .padding(.top, 28)
+                    if viewModel.isLoading {
+                        HomeSkeleton()
+                    } else {
+                        if !viewModel.featured.isEmpty {
+                            FeaturedCarouselView(vehicles: viewModel.featured)
+                                .padding(.top, 28)
+                        }
+                        if !viewModel.popular.isEmpty {
+                            PopularSectionView(vehicles: viewModel.popular)
+                                .padding(.top, 28)
+                        }
+                        if !viewModel.brands.isEmpty {
+                            BrandsSectionView(brands: viewModel.brands)
+                                .padding(.top, 28)
+                        }
                     }
 
                     Spacer(minLength: 32)
@@ -89,10 +91,6 @@ struct HomeView: View {
             }
             .opacity(compactTitleOpacity)
 
-            if viewModel.isLoading {
-                ProgressView()
-                    .tint(.white)
-            }
         }
         .task {
             await viewModel.loadAll()

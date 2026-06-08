@@ -12,9 +12,9 @@ struct FavoritesView: View {
                 header
 
                 if isLoading {
-                    Spacer()
-                    ProgressView().tint(.white)
-                    Spacer()
+                    ScrollView(showsIndicators: false) {
+                        BrowseSkeleton()
+                    }
                 } else if vehicles.isEmpty {
                     emptyState
                 } else {

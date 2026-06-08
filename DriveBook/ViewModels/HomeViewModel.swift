@@ -8,14 +8,14 @@ class HomeViewModel {
     var isLoading = false
 
     func loadAll() async {
+        guard featured.isEmpty else { return }
         isLoading = true
-        defer { isLoading = false }
-        do {
-            featured = try await APIService.fetchFeatured()
-            popular = try await APIService.fetchPopular()
-            brands = try await APIService.fetchBrands()
-        } catch {
-            print("load error: \(error)")
-        }
+        async let feat = APIService.fetchFeatured()
+        async let pop = APIService.fetchPopular()
+        async let brds = APIService.fetchBrands()
+        featured = (try? await feat) ?? []
+        popular = (try? await pop) ?? []
+        brands = (try? await brds) ?? []
+        isLoading = false
     }
 }
