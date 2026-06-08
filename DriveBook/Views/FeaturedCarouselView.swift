@@ -12,8 +12,11 @@ struct FeaturedCarouselView: View {
 
             TabView(selection: $currentIndex) {
                 ForEach(Array(vehicles.enumerated()), id: \.offset) { index, vehicle in
-                    FeaturedCarCard(vehicle: vehicle)
-                        .tag(index)
+                    NavigationLink(value: vehicle) {
+                        FeaturedCarCard(vehicle: vehicle)
+                    }
+                    .buttonStyle(.plain)
+                    .tag(index)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))

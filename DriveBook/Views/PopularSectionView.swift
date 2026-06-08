@@ -18,7 +18,10 @@ struct PopularSectionView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
                     ForEach(vehicles) { vehicle in
-                        PopularCarCard(vehicle: vehicle)
+                        NavigationLink(value: vehicle) {
+                            PopularCarCard(vehicle: vehicle)
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
             }
