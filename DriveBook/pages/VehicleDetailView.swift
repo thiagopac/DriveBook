@@ -18,11 +18,7 @@ struct VehicleDetailView: View {
     var body: some View {
         ZStack(alignment: .top) {
             Color.black.ignoresSafeArea()
-
-            fixedPhoto
-
             scrollContent
-
             navButtons
         }
         .ignoresSafeArea(edges: .top)
@@ -30,38 +26,46 @@ struct VehicleDetailView: View {
         .task { await loadPhotos() }
     }
 
-    private var fixedPhoto: some View {
-        GeometryReader { geo in
-            TabView(selection: $currentPhoto) {
-                ForEach(Array(displayPhotos.enumerated()), id: \.offset) { i, urlStr in
-                    AsyncImage(url: URL(string: urlStr)) { img in
-                        img.resizable().aspectRatio(contentMode: .fill)
-                    } placeholder: {
-                        Color(white: 0.12)
-                    }
-                    .frame(width: geo.size.width, height: photoHeight)
-                    .clipped()
-                    .tag(i)
-                }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-        }
-        .frame(height: photoHeight)
-    }
-
     private var scrollContent: some View {
         ScrollView(showsIndicators: false) {
-            VStack(spacing: 0) {
+            ZStack(alignment: .top) {
                 ZStack(alignment: .bottom) {
-                    Color.clear
-                    pagingDots.padding(.bottom, 16)
+                    photoCarousel
+                        .frame(maxWidth: .infinity)
+                        .frame(height: photoHeight)
+                    pagingDots
+                        .padding(.bottom, photoHeight - cardOffset + 16)
                 }
-                .frame(height: cardOffset)
+                .frame(height: photoHeight)
 
-                infoCard
+                VStack(spacing: 0) {
+                    Color.clear
+                        .frame(height: cardOffset)
+                        .allowsHitTesting(false)
+                    infoCard
+                    Color.white.frame(height: 600)
+                }
             }
+            .frame(maxWidth: .infinity)
         }
         .ignoresSafeArea(edges: .top)
+    }
+
+    private var photoCarousel: some View {
+        TabView(selection: $currentPhoto) {
+            ForEach(Array(displayPhotos.enumerated()), id: \.offset) { i, urlStr in
+                AsyncImage(url: URL(string: urlStr)) { img in
+                    img.resizable().scaledToFill()
+                } placeholder: {
+                    Color(white: 0.12)
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: photoHeight)
+                .clipped()
+                .tag(i)
+            }
+        }
+        .tabViewStyle(.page(indexDisplayMode: .never))
     }
 
     private var pagingDots: some View {
@@ -73,6 +77,30 @@ struct VehicleDetailView: View {
                     .animation(.easeInOut(duration: 0.2), value: currentPhoto)
             }
         }
+    }
+
+    private var navButtons: some View {
+        HStack {
+            Button { dismiss() } label: {
+                Image(systemName: "chevron.left")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(.white)
+                    .frame(width: 38, height: 38)
+                    .background(Color.black.opacity(0.5))
+                    .clipShape(Circle())
+            }
+            Spacer()
+            Button { isFavorite.toggle() } label: {
+                Image(systemName: "heart.fill")
+                    .font(.system(size: 16))
+                    .foregroundStyle(isFavorite ? .red : .white)
+                    .frame(width: 38, height: 38)
+                    .background(Color.black.opacity(0.5))
+                    .clipShape(Circle())
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.top, 68)
     }
 
     private var infoCard: some View {
@@ -110,32 +138,8 @@ struct VehicleDetailView: View {
         .clipShape(TopRoundedShape(radius: 26))
     }
 
-    private var navButtons: some View {
-        HStack {
-            Button { dismiss() } label: {
-                Image(systemName: "chevron.left")
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .frame(width: 38, height: 38)
-                    .background(Color.black.opacity(0.5))
-                    .clipShape(Circle())
-            }
-            Spacer()
-            Button { isFavorite.toggle() } label: {
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 16))
-                    .foregroundStyle(isFavorite ? .red : .white)
-                    .frame(width: 38, height: 38)
-                    .background(Color.black.opacity(0.5))
-                    .clipShape(Circle())
-            }
-        }
-        .padding(.horizontal, 16)
-        .padding(.top, 68)
-    }
-
     private var headerSection: some View {
-        HStack(alignment: .top) {
+        HStack(alignment: .center) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(vehicle.vehicle.make)
                     .font(.system(size: 14))
@@ -157,7 +161,7 @@ struct VehicleDetailView: View {
     @ViewBuilder
     private var priceBox: some View {
         if let msrp = vehicle.vehicle.baseMsrp ?? vehicle.retailListing.price {
-            VStack(alignment: .trailing, spacing: 3) {
+            VStack(alignment: .center, spacing: 3) {
                 Text(priceString(msrp))
                     .font(.system(size: 16, weight: .bold))
                     .foregroundStyle(accent)
@@ -192,7 +196,8 @@ struct VehicleDetailView: View {
                     value: vehicle.appSpecs.topSpeed ?? "—",
                     label: "Top Speed")
             statBox(icon: "fuelpump.fill",
-                    value: vehicle.appSpecs.fuelEconomy ?? "—",
+                    value: (vehicle.appSpecs.fuelEconomy ?? "—")
+                        .replacingOccurrences(of: "/", with: "/\n"),
                     label: "Fuel Economy")
         }
     }
@@ -200,21 +205,22 @@ struct VehicleDetailView: View {
     private func statBox(icon: String, value: String, label: String) -> some View {
         VStack(spacing: 8) {
             Image(systemName: icon)
-                .font(.system(size: 20))
+                .font(.system(size: 18))
                 .foregroundStyle(accent)
             Text(value)
-                .font(.system(size: 12, weight: .bold))
+                .font(.system(size: 11, weight: .bold))
                 .foregroundStyle(.black)
                 .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.7)
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
             Text(label)
                 .font(.system(size: 9))
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.7)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 14)
+        .padding(.vertical, 12)
+        .padding(.horizontal, 4)
         .background(boxBg)
         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
     }

@@ -2,7 +2,12 @@ import SwiftUI
 
 struct VehicleRowView: View {
     let vehicle: VehicleListing
-    @State private var isFavorite = false
+    @State private var isFavorite: Bool
+
+    init(vehicle: VehicleListing, isInitiallyFavorite: Bool = false) {
+        self.vehicle = vehicle
+        self._isFavorite = State(initialValue: isInitiallyFavorite)
+    }
 
     var body: some View {
         HStack(spacing: 14) {

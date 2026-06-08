@@ -1,5 +1,5 @@
 {
-  "total": 12,
+  "total": 11,
   "data": [
     {
       "vin": "WP0AF2A91SS279431",
@@ -471,53 +471,6 @@
           "DC Fast Charging 205 kW",
           "All-Wheel Drive",
           "M Sport Package"
-        ]
-      }
-    },
-    {
-      "vin": "7SAXCDE53SF467194",
-      "vehicle": {
-        "baseMsrp": 84990,
-        "bodyStyle": "SUV",
-        "confidence": 0.995,
-        "doors": 4,
-        "engine": "electric",
-        "exteriorColor": "White",
-        "fuel": "Electric",
-        "interiorColor": "Other",
-        "make": "Tesla",
-        "model": "Model X",
-        "seats": 7,
-        "series": "4dr SUV AWD (electric DD)",
-        "squishVin": "7SAXCDE5SF",
-        "style": "4dr SUV",
-        "transmission": "Direct Drive",
-        "type": "Crossover",
-        "vin": "7SAXCDE53SF467194",
-        "year": 2025
-      },
-      "retailListing": {
-        "dealer": "Carvana",
-        "miles": 9802,
-        "photoCount": 1,
-        "price": 74590,
-        "primaryImage": "https://api.auto.dev/photos/retail/7SAXCDE53SF467194-1.jpg",
-        "used": true,
-        "vdp": "https://www.carvana.com/vehicle/4266102"
-      },
-      "appSpecs": {
-        "horsepower": 670,
-        "acceleration": "3.8s",
-        "topSpeed": "250 km/h",
-        "fuelEconomy": "Electric - 576 km range",
-        "drivetrain": "AWD",
-        "category": "Electric",
-        "description": "The Tesla Model X redefines what an SUV can be. With falcon-wing doors, 7-seat capacity, and 670 HP, it's the world's fastest SUV in its class.",
-        "keyFeatures": [
-          "Dual Electric Motors",
-          "Falcon-Wing Rear Doors",
-          "All-Wheel Drive",
-          "17-inch Cinematic Display"
         ]
       }
     },

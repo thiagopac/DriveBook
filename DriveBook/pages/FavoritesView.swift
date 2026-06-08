@@ -28,7 +28,7 @@ struct FavoritesView: View {
                         LazyVStack(spacing: 0) {
                             ForEach(vehicles) { vehicle in
                                 NavigationLink(value: vehicle) {
-                                    VehicleRowView(vehicle: vehicle)
+                                    VehicleRowView(vehicle: vehicle, isInitiallyFavorite: true)
                                         .padding(.horizontal, 16)
                                 }
                                 .buttonStyle(.plain)
